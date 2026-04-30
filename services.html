@@ -1,544 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Services | VIZIQ Data Assurance</title>
-  <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="VIZIQ helps organisations fix broken data, reduce operational risk, and unlock real-world AI value across real estate, facilities management, and data centres." />
-
-<!-- Google Analytics: replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-
-<style>
-  :root {
-    --teal: #0099A8;
-    --teal-light: #23C6D4;
-    --navy: #07191E;
-    --ink: #0E1F24;
-    --slate: #5A6A70;
-    --mist: #EEF7F8;
-    --warm: #F5F1EA;
-    --white: #FFFFFF;
-    --line: rgba(14,31,36,0.12);
-    --shadow: 0 28px 70px rgba(7, 25, 30, 0.20);
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #ffffff;
-    color: var(--ink);
-  }
-  a { color: inherit; }
-  img { max-width: 100%; display: block; }
-  .container {
-    max-width: 1180px;
-    margin: auto;
-    padding: 0 24px;
-  }
-
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: rgba(255,255,255,0.90);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(14,31,36,0.08);
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-    max-width: 1180px;
-    margin: auto;
-  }
-  .logo {
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 20px;
-  }
-  .logo span { color: var(--teal); }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-  .nav-links a {
-    color: rgba(14,31,36,0.72);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .nav-links a:hover { color: var(--teal); }
-
-  h1, h2, h3, p { margin-top: 0; }
-  h1 {
-    font-size: clamp(46px, 7vw, 82px);
-    line-height: 0.96;
-    letter-spacing: -0.058em;
-    margin-bottom: 28px;
-  }
-  h2 {
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
-    margin-bottom: 18px;
-  }
-  h3 { font-size: 22px; margin-bottom: 12px; }
-  p {
-    color: var(--slate);
-    font-size: 18px;
-    line-height: 1.62;
-  }
-  h1 span, h2 span { color: var(--teal-light); }
-
-  .hero {
-    position: relative;
-    overflow: hidden;
-    color: var(--white);
-    min-height: 660px;
-    display: flex;
-    align-items: center;
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.94) 0%, rgba(7,25,30,0.76) 45%, rgba(7,25,30,0.25) 100%),
-      var(--hero-image) center/cover;
-  }
-  .hero.small {
-    min-height: 460px;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
-    background-size: 58px 58px;
-    opacity: 0.20;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 620px;
-    height: 620px;
-    right: -180px;
-    bottom: -180px;
-    background: radial-gradient(circle, rgba(0,153,168,0.54), transparent 62%);
-    filter: blur(8px);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-  }
-  .hero p {
-    color: rgba(255,255,255,0.82);
-    font-size: 22px;
-    line-height: 1.55;
-    max-width: 760px;
-    margin-bottom: 34px;
-  }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--teal-light);
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 13px;
-    margin-bottom: 22px;
-  }
-  .eyebrow::before {
-    content: "";
-    width: 36px;
-    height: 2px;
-    background: var(--teal-light);
-    display: inline-block;
-  }
-
-  .section { padding: 92px 0; }
-  .section-title { max-width: 790px; margin-bottom: 42px; }
-  .center { text-align: center; }
-  .center .section-title { margin-left: auto; margin-right: auto; }
-
-  .btn-row {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    padding: 14px 24px;
-    background: var(--teal);
-    color: white;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 800;
-    border: 1px solid var(--teal);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 36px rgba(0,153,168,0.34);
-    background: var(--teal-light);
-  }
-  .btn.secondary {
-    background: rgba(255,255,255,0.08);
-    color: var(--white);
-    border-color: rgba(255,255,255,0.34);
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-  }
-  .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card {
-    border: 1px solid var(--line);
-    padding: 30px;
-    border-radius: 26px;
-    background: #ffffff;
-    box-shadow: 0 14px 40px rgba(7,25,30,0.07);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 24px 58px rgba(7,25,30,0.14);
-  }
-  .card-number {
-    color: var(--teal);
-    font-weight: 900;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-  }
-
-  .proof-strip {
-    background: linear-gradient(90deg, var(--mist), #ffffff, var(--warm));
-    border-bottom: 1px solid rgba(14,31,36,0.08);
-  }
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px 0;
-  }
-  .proof-item {
-    font-weight: 900;
-    color: var(--ink);
-    font-size: 19px;
-  }
-  .proof-item span {
-    display: block;
-    color: var(--slate);
-    font-weight: 400;
-    margin-top: 7px;
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .image-split {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 44px;
-    align-items: center;
-  }
-  .photo-card {
-    min-height: 500px;
-    border-radius: 32px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow);
-    background: var(--photo-image) center/cover;
-  }
-  .photo-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7,25,30,0.10), rgba(7,25,30,0.78));
-  }
-  .floating-note {
-    position: absolute;
-    z-index: 2;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-    background: rgba(255,255,255,0.92);
-    border-radius: 22px;
-    padding: 22px;
-    color: var(--ink);
-    font-weight: 800;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.16);
-  }
-  .floating-note span {
-    display: block;
-    color: var(--teal);
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .dark-block {
-    background:
-      radial-gradient(circle at 20% 10%, rgba(0,153,168,0.22), transparent 28%),
-      linear-gradient(135deg, var(--navy), var(--ink));
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  .dark-block p { color: rgba(255,255,255,0.72); }
-  .dark-block .card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    color: white;
-    box-shadow: none;
-  }
-  .dark-block .card h3 { color: white; }
-  .dark-block .card p { color: rgba(255,255,255,0.72); }
-
-  .service-card {
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 30px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    isolation: isolate;
-  }
-  .service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.35s ease;
-    background-image: var(--card-image);
-  }
-  .service-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, rgba(7,25,30,0.08), rgba(7,25,30,0.90));
-  }
-  .service-card:hover::before { transform: scale(1.06); }
-  .service-card p { color: rgba(255,255,255,0.78); }
-
-  .feature {
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.90), rgba(7,25,30,0.55)),
-      var(--feature-image) center/cover;
-    color: white;
-    border-radius: 34px;
-    padding: 54px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-  }
-  .feature p { color: rgba(255,255,255,0.78); max-width: 780px; }
-  .quote {
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-    margin: 0 0 18px;
-    color: white;
-    font-weight: 900;
-    max-width: 840px;
-  }
-  .pill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 26px;
-  }
-  .pill {
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(0,153,168,0.16);
-    color: var(--teal-light);
-    border: 1px solid rgba(35,198,212,0.30);
-    font-weight: 800;
-    font-size: 14px;
-  }
-
-  .outcome-band { background: var(--warm); }
-  .steps { counter-reset: steps; }
-  .step {
-    display: grid;
-    grid-template-columns: 84px 1fr;
-    gap: 24px;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(14,31,36,0.10);
-  }
-  .step::before {
-    counter-increment: steps;
-    content: "0" counter(steps);
-    color: var(--teal);
-    font-weight: 900;
-    font-size: 31px;
-  }
-
-  .contact-form {
-    max-width: 760px;
-    margin: 38px auto 0;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.18);
-    backdrop-filter: blur(18px);
-    border-radius: 30px;
-    padding: 28px;
-    text-align: left;
-    box-shadow: var(--shadow);
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .contact-form label {
-    display: block;
-    color: rgba(255,255,255,0.84);
-    font-size: 14px;
-    font-weight: 800;
-    margin: 0 0 8px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.12);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 16px;
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: rgba(255,255,255,0.48); }
-  .contact-form textarea { min-height: 130px; resize: vertical; }
-  .contact-form button { cursor: pointer; width: auto; }
-  .form-note {
-    margin: 14px 0 0;
-    font-size: 14px;
-    color: rgba(255,255,255,0.62);
-  }
-
-  .cta {
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.92), rgba(7,25,30,0.62)),
-      url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80') center/cover;
-    color: white;
-    padding: 92px 0;
-    text-align: center;
-  }
-  .cta p {
-    color: rgba(255,255,255,0.78);
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  footer {
-    background: #061317;
-    color: rgba(255,255,255,0.62);
-    padding: 28px 0;
-    font-size: 14px;
-  }
-  .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 920px) {
-    .nav-links { display: none; }
-    .hero { min-height: auto; padding: 86px 0; }
-    .image-split, .grid, .grid.two, .proof-grid, .form-row { grid-template-columns: 1fr; }
-    .photo-card { min-height: 420px; }
-    .feature { padding: 34px; }
-    .step { grid-template-columns: 1fr; gap: 8px; }
-  }
-</style>
+<title>Services</title>
+<!-- GA SAME AS ABOVE -->
 </head>
+
 <body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">VIZIQ<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="approach.html">Approach</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</nav>
-<header class="hero small" style="--hero-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1800&q=80');">
-  <div class="container hero-content">
-    <div class="eyebrow">Services</div>
-    <h1>Fix the data. <span>Then scale the value.</span></h1>
-    <p>VIZIQ focuses on the operational foundations that make systems trusted, reporting useful and AI deployable.</p>
-  </div>
-</header>
 
-<section class="section">
-  <div class="container">
-    <div class="grid">
-      <div class="card"><div class="card-number">01</div><h3>Data Assurance</h3><p>Assess, clean, validate and monitor asset, maintenance, compliance and location data so it becomes usable and trusted.</p></div>
-      <div class="card"><div class="card-number">02</div><h3>AI Readiness</h3><p>Identify where AI can create value, what data is needed, and what governance must exist before deployment.</p></div>
-      <div class="card"><div class="card-number">03</div><h3>FM & Real Estate Data</h3><p>Improve the operational data behind FM systems, CAFM/IWMS platforms, compliance reporting and portfolio decision making.</p></div>
-      <div class="card"><div class="card-number">04</div><h3>Technology Selection</h3><p>Support vendor evaluation, requirements definition, RFP design and implementation risk reduction.</p></div>
-      <div class="card"><div class="card-number">05</div><h3>Governance & Control</h3><p>Create ownership, standards, reporting rhythms and exception management so data quality does not decay.</p></div>
-      <div class="card"><div class="card-number">06</div><h3>Programme Rescue</h3><p>Help recover initiatives where poor data, weak adoption or unclear operating models are putting outcomes at risk.</p></div>
-    </div>
-  </div>
-</section>
+<nav>...same nav...</nav>
 
-<section class="section dark-block">
-  <div class="container">
-    <div class="section-title"><h2>How services are delivered</h2><p>Short, sharp interventions or deeper support depending on the scale of the challenge.</p></div>
-    <div class="grid">
-      <div class="card"><h3>Assessment</h3><p>A focused review of data health, risk, readiness and priorities.</p></div>
-      <div class="card"><h3>Roadmap</h3><p>A practical plan showing what to fix first and why it matters commercially.</p></div>
-      <div class="card"><h3>Delivery support</h3><p>Hands-on advisory through remediation, governance, vendor engagement or implementation.</p></div>
-    </div>
-  </div>
-</section>
+<div class="section">
 
-<section class="cta"><div class="container"><h2>Want to understand where your data is holding you back?</h2><p>Start with a quick conversation. No hard sell.</p><a href="contact.html" class="btn">Have a quick chat</a></div></section>
-<footer>
-  <div class="container footer-inner">
-    <div>© 2026 VIZIQ Data Assurance</div>
-    <div>Data assurance • AI readiness • FM & real estate technology</div>
-  </div>
-</footer>
+<h1>Services</h1>
+
+<h2>Data Health Diagnostic — £1,500</h2>
+
+<p>
+A targeted, structured analysis of your operational data to identify quality issues, compliance risk, and commercial impact.
+</p>
+
+<p><b>Fee credited against any subsequent engagement.</b></p>
+
+<h3>Typical scope</h3>
+<ul>
+<li>Sample of key operational records</li>
+<li>1–2 systems</li>
+<li>Focus on data quality, compliance and usability</li>
+</ul>
+
+<h3>You receive</h3>
+<ul>
+<li>Data Health Score</li>
+<li>Key risks and issues</li>
+<li>Commercial impact insight</li>
+<li>Clear next steps</li>
+</ul>
+
+<h3>Typical engagement ranges</h3>
+<p>
+£10k – £25k (targeted work)<br>
+£25k – £75k+ (broader programmes)
+</p>
+
+<h2>Compliance, GDPR & Risk</h2>
+
+<p>
+If you don’t understand your data, you can’t comply with GDPR.
+</p>
+
+<p>
+Right to be forgotten is simple in principle — but difficult in reality.
+If you don’t know where data exists, how it is duplicated, or how it flows between systems, you cannot reliably delete it.
+</p>
+
+<p>
+VIZIQ supports the data foundations required for effective compliance and auditability.
+</p>
+
+<h3>Supporting organisations with purpose</h3>
+
+<p>
+Reduced rates are available for registered charities and non-profit organisations, where the work aligns with improving operational resilience, compliance, or service delivery.
+</p>
+
+<p><i>
+VIZIQ is particularly interested in supporting organisations where better data can genuinely improve outcomes for people and communities.
+</i></p>
+
+</div>
+
 </body>
 </html>
