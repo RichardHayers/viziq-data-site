@@ -1,0 +1,457 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Don’t Boil the Ocean: Fixing the Data That Matters Most | VIZIQ</title>
+
+    <meta name="description" content="Why organisations should focus on the operational data that matters most instead of attempting enterprise-wide perfection." />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38PRV99QD3');
+    </script>
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/wo1k59rk6t";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wo1k59rk6t");
+    </script>
+
+    <style>
+        :root {
+            --primary: #0099A8;
+            --dark: #07191e;
+            --text: #334155;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .hero {
+            background:
+                linear-gradient(90deg, rgba(7,25,30,0.90), rgba(7,25,30,0.70)),
+                url('../images/viziq-proof-impact.png') center/cover;
+            color: white;
+            padding: 120px 24px 90px;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.05;
+            max-width: 900px;
+            margin-bottom: 28px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 760px;
+            opacity: 0.92;
+        }
+
+        .article {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .article h2 {
+            font-size: 38px;
+            margin-top: 70px;
+            margin-bottom: 24px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .article p {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+
+        .article ul,
+        .article ol {
+            margin-bottom: 28px;
+            padding-left: 28px;
+        }
+
+        .article li {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .summary-box {
+            background: white;
+            border-left: 5px solid var(--primary);
+            padding: 36px;
+            border-radius: 18px;
+            margin-bottom: 60px;
+            box-shadow: 0 12px 40px rgba(15,23,42,0.05);
+        }
+
+        .summary-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #07191e, #0c2b33);
+            color: white;
+            padding: 42px;
+            border-radius: 24px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote p {
+            font-size: 30px;
+            line-height: 1.4;
+            margin: 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .cta {
+            margin-top: 80px;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 16px 50px rgba(15,23,42,0.06);
+            border: 1px solid var(--border);
+        }
+
+        .cta h3 {
+            font-size: 34px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .cta p {
+            margin-bottom: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer div {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p,
+            .article p,
+            .article li {
+                font-size: 18px;
+            }
+
+            .article h2 {
+                font-size: 30px;
+            }
+
+            .quote p {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Don’t Boil the Ocean: Fixing the Data That Matters Most</h1>
+        <p>
+            Why organisations should stop trying to fix everything at once and focus instead on the operational data that delivers measurable business value.
+        </p>
+    </div>
+</section>
+
+<section class="article">
+
+    <div class="summary-box">
+        <h3>Executive Summary</h3>
+
+        <p>
+            One of the most common mistakes organisations make in data transformation programmes is trying to fix everything at once.
+        </p>
+
+        <p>
+            Enterprise-wide data remediation sounds impressive in strategy decks, but in practice it often becomes expensive, politically difficult, operationally disruptive and slow to demonstrate value.
+        </p>
+
+        <p>
+            A better approach is to focus first on the operational data that matters most.
+        </p>
+
+        <p>
+            Improve the datasets directly impacting operational performance, compliance, reporting confidence, system adoption and AI readiness. Demonstrate measurable value early, build trust with the business, and expand iteratively from there.
+        </p>
+    </div>
+
+    <h2>The Problem With “Fix Everything”</h2>
+
+    <p>
+        Large-scale transformation programmes often begin with the right intentions.
+    </p>
+
+    <p>
+        Organisations recognise inconsistent reporting, unreliable operational visibility, fragmented ownership and growing compliance pressure. Leadership responds by launching broad transformation initiatives intended to standardise and improve data across the enterprise.
+    </p>
+
+    <p>
+        The problem is that many programmes quickly become too broad.
+    </p>
+
+    <p>
+        Instead of focusing on the operational data creating the greatest business risk, scope expands into every system, every process, every dataset and every historic inconsistency.
+    </p>
+
+    <p>
+        At that point, complexity begins to overwhelm momentum.
+    </p>
+
+    <div class="quote">
+        <p>
+            “You do not need perfect data everywhere to create meaningful operational value.”
+        </p>
+    </div>
+
+    <h2>Not All Data Has Equal Operational Value</h2>
+
+    <p>
+        One of the most important lessons in operational transformation is that not all data carries the same operational or commercial importance.
+    </p>
+
+    <p>
+        Some datasets directly impact:
+    </p>
+
+    <ul>
+        <li>Compliance</li>
+        <li>Operational performance</li>
+        <li>Executive reporting</li>
+        <li>System trust</li>
+        <li>Commercial decision-making</li>
+        <li>Operational AI readiness</li>
+    </ul>
+
+    <p>
+        Other datasets may have relatively little operational consequence.
+    </p>
+
+    <p>
+        Treating all data equally creates unnecessary complexity, cost and delivery fatigue.
+    </p>
+
+    <h2>Focus On What Matters First</h2>
+
+    <p>
+        The goal should not be theoretical perfection across the enterprise.
+    </p>
+
+    <p>
+        The goal should be improving the data that creates measurable operational outcomes.
+    </p>
+
+    <p>
+        Effective programmes identify:
+    </p>
+
+    <ul>
+        <li>Which operational processes matter most</li>
+        <li>Which systems are business critical</li>
+        <li>Where poor data creates operational risk</li>
+        <li>Which reporting outputs drive decisions</li>
+        <li>Which datasets underpin compliance and trust</li>
+    </ul>
+
+    <p>
+        That becomes the starting point.
+    </p>
+
+    <h2>Business Buy-In Comes From Results</h2>
+
+    <p>
+        Most operational teams do not care about governance diagrams or architecture models.
+    </p>
+
+    <p>
+        They care about:
+    </p>
+
+    <ul>
+        <li>Operational efficiency</li>
+        <li>Reporting confidence</li>
+        <li>Reduced risk</li>
+        <li>Systems they can trust</li>
+        <li>Better visibility</li>
+        <li>Faster decisions</li>
+    </ul>
+
+    <p>
+        That trust is built through visible operational improvement.
+    </p>
+
+    <p>
+        When users see cleaner reporting, fewer operational failures and more reliable systems, they become far more willing to support broader transformation initiatives.
+    </p>
+
+    <h2>AI Makes This Even More Important</h2>
+
+    <p>
+        AI does not remove poor operational data.
+    </p>
+
+    <p>
+        It amplifies it.
+    </p>
+
+    <p>
+        Organisations deploying AI on top of inconsistent operational data, fragmented ownership and unreliable reporting risk scaling poor decision-making faster than ever before.
+    </p>
+
+    <p>
+        This is why AI readiness should begin with trusted operational data foundations.
+    </p>
+
+    <div class="quote">
+        <p>
+            “AI success rarely begins with algorithms. It begins with trusted operational data.”
+        </p>
+    </div>
+
+    <h2>Real-World Operational Experience</h2>
+
+    <p>
+        In one major operational transformation programme, a large-scale rollout was under pressure to proceed despite significant underlying data quality issues.
+    </p>
+
+    <p>
+        The programme team faced a choice:
+    </p>
+
+    <ul>
+        <li>Continue to go live and hope the system corrected the problem</li>
+        <li>Or pause, remediate critical operational data, and introduce governance controls</li>
+    </ul>
+
+    <p>
+        The decision was made to focus on the operational data that mattered most.
+    </p>
+
+    <p>
+        Rather than attempting to fix every historical issue across the organisation, the programme concentrated on the datasets directly impacting operational trust, reporting confidence, compliance visibility and commercial performance.
+    </p>
+
+    <p>
+        Governance controls were introduced, ownership improved, and reporting became significantly more reliable.
+    </p>
+
+    <p>
+        The result was measurable business value, stronger adoption and increased operational trust.
+    </p>
+
+    <h2>A More Sustainable Approach</h2>
+
+    <p>
+        The most effective transformation programmes are iterative.
+    </p>
+
+    <ol>
+        <li>Identify critical operational priorities</li>
+        <li>Improve the data that matters most</li>
+        <li>Demonstrate measurable outcomes</li>
+        <li>Build business trust</li>
+        <li>Expand progressively</li>
+    </ol>
+
+    <p>
+        This approach is commercially realistic, operationally sustainable and significantly more likely to succeed.
+    </p>
+
+    <h2>Final Thought</h2>
+
+    <p>
+        Organisations do not need perfect data everywhere before they can improve operational performance, strengthen governance or prepare for AI adoption.
+    </p>
+
+    <p>
+        They need trusted data where it matters most.
+    </p>
+
+    <p>
+        The organisations that succeed are rarely the ones attempting to fix everything simultaneously.
+    </p>
+
+    <p>
+        They are the ones that focus first on the operational data creating the greatest business impact, prove value early, and build from there.
+    </p>
+
+    <div class="quote">
+        <p>
+            “Don’t boil the ocean. Fix what matters first.”
+        </p>
+    </div>
+
+    <div class="cta">
+        <h3>Operational Data, Governance & AI Readiness</h3>
+
+        <p>
+            If your organisation is struggling with operational data trust, AI readiness or governance challenges, VIZIQ can help.
+        </p>
+
+        <a href="../contact.html" class="button">Contact VIZIQ</a>
+    </div>
+
+</section>
+
+<footer>
+    <div>Data assurance • AI readiness • Governance • Operational improvement</div>
+    <div>© 2026 VIZIQ Data Assurance. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
+```
