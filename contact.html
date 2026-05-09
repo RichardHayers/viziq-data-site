@@ -552,5 +552,40 @@
     <div>Data assurance • AI readiness • Governance • Operational improvement</div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseUrl = 'https://enkwkmavvqkorrfsxgiq.supabase.co';
+const supabaseKey = 'sb_publishable_8C00gk4VqPxeqjEHdxKIWw_CvIRS93_';
+
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
+        message: document.getElementById('message').value,
+        source: document.referrer || 'direct',
+        page_url: window.location.href,
+        status: 'new'
+    };
+
+    try {
+        await supabaseClient
+            .from('enquiries')
+            .insert([formData]);
+    } catch (error) {
+        console.error('Supabase insert failed:', error);
+    }
+
+    form.submit();
+});
+</script>
+
 </body>
 </html>
