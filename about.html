@@ -491,6 +491,70 @@
     .feature { padding: 34px; }
     .step { grid-template-columns: 1fr; gap: 8px; }
   }
+
+  .credibility-band {
+    background: linear-gradient(90deg, var(--mist), #ffffff, var(--warm));
+    border-top: 1px solid rgba(14,31,36,0.08);
+    border-bottom: 1px solid rgba(14,31,36,0.08);
+  }
+  .credibility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .credibility-item {
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(14,31,36,0.10);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 12px 34px rgba(7,25,30,0.06);
+  }
+  .credibility-item strong {
+    display: block;
+    color: var(--ink);
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .credibility-item span {
+    color: var(--slate);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .founder-note {
+    background: var(--ink);
+    color: white;
+    border-radius: 30px;
+    padding: 34px;
+    box-shadow: var(--shadow);
+  }
+  .founder-note p { color: rgba(255,255,255,0.74); }
+  .founder-note h3 { color: white; font-size: 28px; }
+  .belief-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .belief-item {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .belief-item::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--teal);
+    margin-top: 8px;
+    box-shadow: 0 0 0 8px rgba(0,153,168,0.12);
+  }
+  .belief-item p { margin: 0; }
+  @media (max-width: 920px) {
+    .credibility-grid { grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -508,42 +572,95 @@
     </div>
   </div>
 </nav>
+
 <header class="hero small" style="--hero-image: url('images/viziq-hero.png');">
   <div class="container hero-content">
     <div class="eyebrow">About VIZIQ</div>
-    <h1>Real-world experience. <span>Clear point of view.</span></h1>
-    <p>VIZIQ is built around a simple belief: AI will not deliver value unless the data underneath it can be trusted.</p>
+    <h1>Real operational experience. <span>Not data theatre.</span></h1>
+    <p>VIZIQ helps organisations turn unreliable operational data into trusted business information, stronger governance and AI foundations that can actually work.</p>
   </div>
 </header>
+
+<section class="proof-strip">
+  <div class="container proof-grid">
+    <div class="proof-item">Data before AI<span>Because automation only amplifies what is already underneath it.</span></div>
+    <div class="proof-item">Critical data first<span>Start with the information that drives cost, risk, compliance and operational control.</span></div>
+    <div class="proof-item">Visible business value<span>Prove the improvement on a focused area before scaling across the organisation.</span></div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container image-split">
     <div class="photo-card" style="--photo-image: url('images/viziq-data-trust.png');">
-      <div class="floating-note"><span>Core belief</span>Do not implement AI until your data is right.</div>
+      <div class="floating-note"><span>Core belief</span>Do not boil the ocean. Fix the data that matters most, prove the value, then scale.</div>
     </div>
     <div>
       <div class="section-title">
-        <h2>Built for complex operational environments.</h2>
-        <p>VIZIQ supports organisations operating in complex, data-intensive environments where poor operational data quickly becomes commercial, compliance and decision-making risk.</p>
+        <h2>Built for complex, operational environments.</h2>
+        <p>VIZIQ exists for organisations where poor data is not just an IT irritation. It becomes a commercial, compliance, safety, service and decision-making risk.</p>
       </div>
-      <p>The focus is practical: trusted data, better governance, stronger decisions, clearer accountability and AI that can actually work in the real world.</p>
-      <p>This is not generic data consultancy. It is grounded in real operational systems, governance challenges, compliance pressures and measurable business outcomes.</p>
+      <p>The focus is practical: trusted operational data, clear ownership, better governance, stronger reporting and AI readiness built on foundations that people can believe in.</p>
+      <p>This is not generic data consultancy. It is grounded in real enterprise systems, operational pressure, transformation risk, vendor complexity and the hard reality that dashboards are useless when the underlying data cannot be trusted.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section credibility-band">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Experience</div>
+      <h2>Why clients listen.</h2>
+      <p>VIZIQ brings a rare mix of operational leadership, data governance, technology delivery and commercial accountability.</p>
+    </div>
+    <div class="credibility-grid">
+      <div class="credibility-item"><strong>Operational systems</strong><span>Experience across complex platforms, asset data, compliance information, reporting and operational workflows.</span></div>
+      <div class="credibility-item"><strong>Executive perspective</strong><span>Able to connect data quality to cost, risk, governance, performance and board-level decision-making.</span></div>
+      <div class="credibility-item"><strong>Technology realism</strong><span>Clear-eyed about what platforms, dashboards and AI can deliver when the foundations are right - and when they are not.</span></div>
+      <div class="credibility-item"><strong>Commercial outcomes</strong><span>Focused on measurable improvement, not endless cleansing programmes or consultancy slide decks.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container image-split">
+    <div>
+      <div class="section-title">
+        <div class="eyebrow">Point of view</div>
+        <h2>AI is not the starting point. <span>Trust is.</span></h2>
+        <p>Most organisations are being pushed to adopt AI faster than they are fixing the information AI depends on.</p>
+      </div>
+      <div class="belief-list">
+        <div class="belief-item"><p><strong>Bad data does not become good because AI is added.</strong><br>It usually becomes a faster, more confident version of the same problem.</p></div>
+        <div class="belief-item"><p><strong>Governance is not bureaucracy.</strong><br>It is how organisations keep trust alive after the first clean-up has been completed.</p></div>
+        <div class="belief-item"><p><strong>Operational teams need usable data, not abstract strategy.</strong><br>The work has to improve real decisions, real processes and real accountability.</p></div>
+      </div>
+    </div>
+    <div class="founder-note">
+      <h3>A practical founder-led approach.</h3>
+      <p>VIZIQ is deliberately positioned around pragmatic, senior-level support. The aim is to help leadership teams see where data is creating risk, where it can create value, and what needs to be fixed first.</p>
+      <p>That means focusing on the critical records, ownership gaps, business rules, governance rhythms and operational processes that make trusted data sustainable.</p>
+      <div class="pill-list">
+        <span class="pill">Data assurance</span>
+        <span class="pill">AI readiness</span>
+        <span class="pill">Governance</span>
+        <span class="pill">Operational improvement</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section dark-block">
   <div class="container">
-    <div class="section-title"><h2>Why the point of view matters</h2><p>Most organisations are being pushed to adopt AI before they have fixed the foundations.</p></div>
+    <div class="section-title"><h2>What VIZIQ stands for</h2><p>A clear, practical view of how organisations should approach data, AI and operational improvement.</p></div>
     <div class="grid">
-      <div class="card"><h3>Data before AI</h3><p>If the data is incomplete, inconsistent or ungoverned, AI scales the problem.</p></div>
-      <div class="card"><h3>Outcomes before tools</h3><p>The value is not in the dashboard or platform. It is in better decisions and operational control.</p></div>
-      <div class="card"><h3>Governance before scale</h3><p>Without ownership and controls, data quality decays and trust disappears.</p></div>
+      <div class="card"><h3>Data before AI</h3><p>If the data is incomplete, inconsistent or ungoverned, AI scales the problem rather than solving it.</p></div>
+      <div class="card"><h3>Outcomes before tools</h3><p>The value is not in the dashboard, platform or model. It is in better decisions, reduced risk and stronger operational control.</p></div>
+      <div class="card"><h3>Governance before scale</h3><p>Without ownership, standards and exception controls, data quality decays and confidence disappears.</p></div>
     </div>
   </div>
 </section>
 
-<section class="cta"><div class="container"><h2>Looking for a practical perspective on data and AI?</h2><p>Happy to have a quick chat.</p><a href="contact.html" class="btn">Start the conversation</a></div></section>
+<section class="cta"><div class="container"><h2>Looking for a practical perspective on data and AI?</h2><p>Start with a focused conversation about where the real constraint sits.</p><a href="contact.html" class="btn">Start the conversation</a></div></section>
 <footer>
   <div class="container footer-inner">
     <div>© 2026 VIZIQ Data Assurance</div>
