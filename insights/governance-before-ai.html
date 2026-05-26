@@ -1,465 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance Before AI: Why Trusted Operational Data Matters More Than Algorithms | VIZIQ</title>
+  <meta name="description" content="Why organisations should focus on governance, trusted operational data and business ownership before accelerating AI adoption." />
 
-    <title>Governance Before AI: Why Trusted Operational Data Matters More Than Algorithms | VIZIQ</title>
-
-    <meta name="description" content="Why organisations should focus on governance, trusted operational data and business ownership before accelerating AI adoption." />
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-38PRV99QD3');
-    </script>
-
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/wo1k59rk6t";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wo1k59rk6t");
-    </script>
-
-    <style>
-        :root {
-            --primary: #0099A8;
-            --dark: #07191e;
-            --text: #334155;
-            --light: #f8fafc;
-            --border: #e2e8f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8fafc;
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        .hero {
-            background:
-                linear-gradient(90deg, rgba(7,25,30,0.92), rgba(7,25,30,0.72)),
-                url('../images/viziq-hero.png') center/cover;
-            color: white;
-            padding: 120px 24px 90px;
-        }
-
-        .hero-content {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            line-height: 1.05;
-            max-width: 920px;
-            margin-bottom: 28px;
-        }
-
-        .hero p {
-            font-size: 22px;
-            max-width: 760px;
-            opacity: 0.92;
-        }
-
-        .article {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 80px 24px;
-        }
-
-        .article h2 {
-            font-size: 38px;
-            margin-top: 70px;
-            margin-bottom: 24px;
-            color: var(--dark);
-            line-height: 1.2;
-        }
-
-        .article p {
-            font-size: 20px;
-            margin-bottom: 24px;
-        }
-
-        .article ul,
-        .article ol {
-            margin-bottom: 28px;
-            padding-left: 28px;
-        }
-
-        .article li {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .summary-box {
-            background: white;
-            border-left: 5px solid var(--primary);
-            padding: 36px;
-            border-radius: 18px;
-            margin-bottom: 60px;
-            box-shadow: 0 12px 40px rgba(15,23,42,0.05);
-        }
-
-        .summary-box h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .quote {
-            background: linear-gradient(135deg, #07191e, #0c2b33);
-            color: white;
-            padding: 42px;
-            border-radius: 24px;
-            margin: 60px 0;
-        }
-
-        .quote p {
-            font-size: 30px;
-            line-height: 1.4;
-            margin: 0;
-            color: white;
-            font-weight: 600;
-        }
-
-        .cta {
-            margin-top: 80px;
-            background: white;
-            padding: 48px;
-            border-radius: 24px;
-            box-shadow: 0 16px 50px rgba(15,23,42,0.06);
-            border: 1px solid var(--border);
-        }
-
-        .cta h3 {
-            font-size: 34px;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .button {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            padding: 16px 28px;
-            border-radius: 12px;
-            font-weight: 700;
-            margin-top: 16px;
-        }
-
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 40px 24px;
-            text-align: center;
-        }
-
-        footer div {
-            margin-bottom: 12px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero p,
-            .article p,
-            .article li {
-                font-size: 18px;
-            }
-
-            .article h2 {
-                font-size: 30px;
-            }
-
-            .quote p {
-                font-size: 24px;
-            }
-        }
-    </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-38PRV99QD3');
+  </script>
+  <script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/wo1k59rk6t";
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "wo1k59rk6t");
+  </script>
+  <style>
+  :root {
+    --teal: #0099A8;
+    --teal-light: #23C6D4;
+    --navy: #07191E;
+    --ink: #0E1F24;
+    --slate: #5A6A70;
+    --mist: #EEF7F8;
+    --warm: #F5F1EA;
+    --white: #FFFFFF;
+    --line: rgba(14,31,36,0.12);
+    --shadow: 0 28px 70px rgba(7, 25, 30, 0.20);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #ffffff; color: var(--ink); }
+  a { color: inherit; }
+  .container { max-width: 1180px; margin: auto; padding: 0 24px; }
+  .nav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(14,31,36,0.08); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; max-width: 1180px; margin: auto; }
+  .logo { font-weight: 900; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; font-size: 20px; }
+  .logo span { color: var(--teal); }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: rgba(14,31,36,0.72); text-decoration: none; font-size: 14px; font-weight: 700; }
+  .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+  .hero { position: relative; overflow: hidden; color: var(--white); min-height: 560px; display: flex; align-items: center; background: linear-gradient(90deg, rgba(7,25,30,0.95) 0%, rgba(7,25,30,0.76) 48%, rgba(7,25,30,0.34) 100%), var(--hero-image) center/cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 58px 58px; opacity: 0.18; }
+  .hero::after { content: ""; position: absolute; width: 620px; height: 620px; right: -180px; bottom: -180px; background: radial-gradient(circle, rgba(0,153,168,0.52), transparent 62%); filter: blur(8px); }
+  .hero-content { position: relative; z-index: 2; max-width: 940px; }
+  .back-link { display: inline-flex; color: rgba(255,255,255,0.76); text-decoration: none; font-size: 14px; font-weight: 800; margin-bottom: 28px; }
+  .back-link:hover { color: var(--teal-light); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--teal-light); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; margin-bottom: 20px; }
+  .eyebrow::before { content: ""; width: 36px; height: 2px; background: var(--teal-light); display: inline-block; }
+  h1 { font-size: clamp(42px, 6vw, 74px); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 26px; }
+  h1 span { color: var(--teal-light); }
+  .hero p { color: rgba(255,255,255,0.84); font-size: 22px; line-height: 1.55; max-width: 800px; margin: 0; }
+  .article-wrap { background: linear-gradient(180deg, #ffffff, var(--mist)); }
+  .article { max-width: 940px; margin: 0 auto; padding: 82px 24px 92px; }
+  .article h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.04em; color: var(--ink); margin: 72px 0 22px; }
+  .article h3 { color: var(--ink); font-size: 26px; margin: 0 0 16px; }
+  .article p, .article li { color: var(--slate); font-size: 19px; line-height: 1.66; }
+  .article p { margin: 0 0 22px; }
+  .article ul, .article ol { margin: 0 0 32px; padding-left: 28px; }
+  .article li { margin-bottom: 9px; }
+  .summary-box { background: #ffffff; border: 1px solid var(--line); border-left: 6px solid var(--teal); padding: 34px; border-radius: 28px; margin-bottom: 62px; box-shadow: 0 18px 48px rgba(7,25,30,0.08); }
+  .summary-box h3 { font-size: 28px; }
+  .quote { background: radial-gradient(circle at 18% 20%, rgba(0,153,168,0.26), transparent 32%), linear-gradient(135deg, var(--navy), var(--ink)); color: white; padding: 42px; border-radius: 30px; margin: 58px 0; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+  .quote::after { content: "V"; position: absolute; right: 24px; bottom: -55px; font-size: 180px; font-weight: 900; color: rgba(255,255,255,0.05); }
+  .quote p { position: relative; z-index: 1; font-size: clamp(25px, 3vw, 36px); line-height: 1.22; letter-spacing: -0.025em; margin: 0; color: white; font-weight: 900; }
+  .cta { margin-top: 76px; background: #ffffff; padding: 44px; border-radius: 30px; box-shadow: 0 18px 48px rgba(7,25,30,0.08); border: 1px solid var(--line); }
+  .cta h3 { font-size: 34px; letter-spacing: -0.03em; }
+  .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 14px 24px; background: var(--teal); color: white; text-decoration: none; border-radius: 999px; font-weight: 800; border: 1px solid var(--teal); transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+  .button:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,153,168,0.34); background: var(--teal-light); }
+  .related { padding: 86px 0; background: var(--warm); }
+  .related-title { max-width: 760px; margin-bottom: 34px; }
+  .related-title h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.045em; margin: 0 0 14px; }
+  .related-title p { color: var(--slate); font-size: 18px; line-height: 1.6; margin: 0; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .related-card { background: white; border: 1px solid var(--line); padding: 30px; border-radius: 26px; box-shadow: 0 14px 40px rgba(7,25,30,0.07); text-decoration: none; transition: transform 0.22s ease, box-shadow 0.22s ease; }
+  .related-card:hover { transform: translateY(-5px); box-shadow: 0 24px 58px rgba(7,25,30,0.14); }
+  .related-card h3 { margin: 0 0 10px; font-size: 24px; color: var(--ink); }
+  .related-card p { margin: 0; color: var(--slate); font-size: 17px; line-height: 1.55; }
+  footer { background: #061317; color: rgba(255,255,255,0.62); padding: 28px 0; font-size: 14px; }
+  .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 920px) { .nav-links { display: none; } .hero { min-height: auto; padding: 86px 0; } .related-grid { grid-template-columns: 1fr; } .article { padding-top: 62px; } .summary-box, .quote, .cta { padding: 28px; } }
+</style>
 </head>
 <body>
-
-<section class="hero">
-    <div class="hero-content">
-        <h1>Governance Before AI: Why Trusted Operational Data Matters More Than Algorithms</h1>
-        <p>
-            AI adoption is accelerating rapidly, but many organisations are trying to scale intelligence before establishing trusted operational foundations.
-        </p>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">VIZIQ<span>.</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../case-studies.html">Case Studies</a>
+      <a href="../approach.html">Approach</a>
+      <a href="../about.html">About</a>
+      <a href="../insights.html" class="active">Insights</a>
+      <a href="../contact.html">Contact</a>
     </div>
-</section>
+  </div>
+</nav>
+<header class="hero" style="--hero-image: url('../images/viziq-ai-readiness.png');">
+  <div class="container hero-content">
+    <a href="../insights.html" class="back-link">← Back to insights</a>
+    <div class="eyebrow">Governance and AI</div>
+    <h1>Governance Before AI: Why Trusted Operational Data Matters More Than Algorithms</h1>
+    <p>AI adoption is accelerating rapidly, but many organisations are trying to scale intelligence before establishing trusted operational foundations.</p>
+  </div>
+</header>
 
-<section class="article">
+<main>
+  <section class="article-wrap">
+    <article class="article">
 
-    <div class="summary-box">
-        <h3>Executive Summary</h3>
-
-        <p>
+<div class="summary-box">
+<h3>Executive Summary</h3>
+<p>
             Organisations across every sector are accelerating AI initiatives in pursuit of efficiency, automation and competitive advantage.
         </p>
-
-        <p>
+<p>
             The problem is that many are attempting to deploy AI on top of fragmented operational data, inconsistent reporting and weak governance structures.
         </p>
-
-        <p>
+<p>
             AI does not remove poor operational data.
         </p>
-
-        <p>
+<p>
             It amplifies it.
         </p>
-
-        <p>
+<p>
             Before organisations focus on copilots, predictive analytics or large-scale automation, they should first establish trusted operational data, clear ownership and governance foundations.
         </p>
-    </div>
-
-    <h2>The Rush Towards AI</h2>
-
-    <p>
+</div>
+<h2>The Rush Towards AI</h2>
+<p>
         AI has rapidly become a board-level priority.
     </p>
-
-    <p>
+<p>
         Organisations are under pressure to demonstrate innovation, improve operational efficiency and accelerate decision-making.
     </p>
-
-    <p>
+<p>
         This has triggered a wave of AI experimentation across:
     </p>
-
-    <ul>
-        <li>Operational reporting</li>
-        <li>Predictive analytics</li>
-        <li>Automation workflows</li>
-        <li>Asset optimisation</li>
-        <li>Compliance monitoring</li>
-        <li>Customer interaction</li>
-        <li>Operational intelligence</li>
-    </ul>
-
-    <p>
+<ul>
+<li>Operational reporting</li>
+<li>Predictive analytics</li>
+<li>Automation workflows</li>
+<li>Asset optimisation</li>
+<li>Compliance monitoring</li>
+<li>Customer interaction</li>
+<li>Operational intelligence</li>
+</ul>
+<p>
         The opportunity is real.
     </p>
-
-    <p>
+<p>
         But so is the operational risk.
     </p>
-
-    <div class="quote">
-        <p>
+<div class="quote">
+<p>
             “AI will not fix poor operational data. It will scale it faster.”
         </p>
-    </div>
-
-    <h2>The Real Foundation Of AI</h2>
-
-    <p>
+</div>
+<h2>The Real Foundation Of AI</h2>
+<p>
         Most AI discussions focus heavily on models, tooling and automation capabilities.
     </p>
-
-    <p>
+<p>
         In practice, the success or failure of operational AI usually depends on something far less glamorous:
     </p>
-
-    <ul>
-        <li>Trusted operational data</li>
-        <li>Clear governance</li>
-        <li>Consistent ownership</li>
-        <li>Reliable reporting</li>
-        <li>Operational accountability</li>
-    </ul>
-
-    <p>
+<ul>
+<li>Trusted operational data</li>
+<li>Clear governance</li>
+<li>Consistent ownership</li>
+<li>Reliable reporting</li>
+<li>Operational accountability</li>
+</ul>
+<p>
         Without these foundations, organisations risk generating faster decisions based on unreliable information.
     </p>
-
-    <p>
+<p>
         That creates significant challenges around trust, adoption and operational confidence.
     </p>
-
-    <h2>Governance Is Not Bureaucracy</h2>
-
-    <p>
+<h2>Governance Is Not Bureaucracy</h2>
+<p>
         Governance is often misunderstood.
     </p>
-
-    <p>
+<p>
         Many organisations see governance as a slowing force rather than an operational enabler.
     </p>
-
-    <p>
+<p>
         In reality, effective governance creates:
     </p>
-
-    <ul>
-        <li>Clear ownership</li>
-        <li>Operational accountability</li>
-        <li>Trusted reporting</li>
-        <li>Data consistency</li>
-        <li>Reduced operational risk</li>
-        <li>Improved system trust</li>
-    </ul>
-
-    <p>
+<ul>
+<li>Clear ownership</li>
+<li>Operational accountability</li>
+<li>Trusted reporting</li>
+<li>Data consistency</li>
+<li>Reduced operational risk</li>
+<li>Improved system trust</li>
+</ul>
+<p>
         Governance is not about creating unnecessary process.
     </p>
-
-    <p>
+<p>
         It is about creating operational trust.
     </p>
-
-    <div class="quote">
-        <p>
+<div class="quote">
+<p>
             “AI success rarely begins with algorithms. It begins with trusted operational data.”
         </p>
-    </div>
-
-    <h2>The Business Trust Challenge</h2>
-
-    <p>
+</div>
+<h2>The Business Trust Challenge</h2>
+<p>
         One of the biggest barriers to AI adoption is not technology.
     </p>
-
-    <p>
+<p>
         It is confidence.
     </p>
-
-    <p>
+<p>
         Operational teams need to trust:
     </p>
-
-    <ul>
-        <li>The underlying data</li>
-        <li>The reporting outputs</li>
-        <li>The recommendations being generated</li>
-        <li>The governance around decision-making</li>
-    </ul>
-
-    <p>
+<ul>
+<li>The underlying data</li>
+<li>The reporting outputs</li>
+<li>The recommendations being generated</li>
+<li>The governance around decision-making</li>
+</ul>
+<p>
         If users do not trust the data, they will not trust the AI built on top of it.
     </p>
-
-    <p>
+<p>
         This is why governance and operational data quality are foundational to successful AI adoption.
     </p>
-
-    <h2>Operational AI Requires Operational Discipline</h2>
-
-    <p>
+<h2>Operational AI Requires Operational Discipline</h2>
+<p>
         The organisations seeing the strongest operational AI outcomes are usually the ones that already have:
     </p>
-
-    <ul>
-        <li>Clear operational processes</li>
-        <li>Reliable reporting</li>
-        <li>Data ownership</li>
-        <li>Governance structures</li>
-        <li>Defined operational standards</li>
-    </ul>
-
-    <p>
+<ul>
+<li>Clear operational processes</li>
+<li>Reliable reporting</li>
+<li>Data ownership</li>
+<li>Governance structures</li>
+<li>Defined operational standards</li>
+</ul>
+<p>
         AI then becomes an accelerator.
     </p>
-
-    <p>
+<p>
         Organisations lacking those foundations often discover that AI simply exposes operational inconsistency faster than before.
     </p>
-
-    <h2>Real-World Operational Experience</h2>
-
-    <p>
+<h2>Real-World Operational Experience</h2>
+<p>
         In one operational transformation programme, significant pressure existed to accelerate delivery despite major underlying data quality concerns.
     </p>
-
-    <p>
+<p>
         Leadership faced a difficult choice between speed and operational confidence.
     </p>
-
-    <p>
+<p>
         The programme paused, focused on governance, improved operational ownership and remediated the critical datasets directly impacting reporting and operational trust.
     </p>
-
-    <p>
+<p>
         That decision significantly improved system adoption, reporting confidence and long-term operational outcomes.
     </p>
-
-    <p>
+<p>
         The lesson was clear:
     </p>
-
-    <p>
+<p>
         Operational trust must come before intelligent automation.
     </p>
-
-    <h2>A Better AI Readiness Strategy</h2>
-
-    <p>
+<h2>A Better AI Readiness Strategy</h2>
+<p>
         Effective AI readiness is rarely about deploying the most advanced tools first.
     </p>
-
-    <p>
+<p>
         It is about building trusted operational foundations.
     </p>
-
-    <ol>
-        <li>Identify critical operational datasets</li>
-        <li>Improve governance and ownership</li>
-        <li>Strengthen reporting confidence</li>
-        <li>Improve operational consistency</li>
-        <li>Then scale AI capabilities progressively</li>
-    </ol>
-
-    <p>
+<ol>
+<li>Identify critical operational datasets</li>
+<li>Improve governance and ownership</li>
+<li>Strengthen reporting confidence</li>
+<li>Improve operational consistency</li>
+<li>Then scale AI capabilities progressively</li>
+</ol>
+<p>
         This creates sustainable adoption rather than short-term experimentation.
     </p>
-
-    <h2>Final Thought</h2>
-
-    <p>
+<h2>Final Thought</h2>
+<p>
         Organisations rushing towards AI without trusted operational foundations risk accelerating poor decisions, fragmented reporting and operational confusion.
     </p>
-
-    <p>
+<p>
         The organisations that succeed will be the ones that establish governance, operational trust and reliable data foundations first.
     </p>
-
-    <div class="quote">
-        <p>
+<div class="quote">
+<p>
             “Governance is not bureaucracy. It is operational trust.”
         </p>
-    </div>
-
-    <div class="cta">
-        <h3>Operational Data, Governance & AI Readiness</h3>
-
-        <p>
+</div>
+<div class="cta">
+<h3>Operational Data, Governance &amp; AI Readiness</h3>
+<p>
             VIZIQ helps organisations strengthen operational data, governance and AI readiness foundations before scaling transformation programmes.
         </p>
+<a class="button" href="../contact.html">Start the conversation</a>
+</div>
 
-        <a href="../contact.html" class="button">Contact VIZIQ</a>
+    </article>
+  </section>
+
+  <section class="related">
+    <div class="container">
+      <div class="related-title">
+        <div class="eyebrow">Continue reading</div>
+        <h2>Related VIZIQ insights</h2>
+        <p>More practical thinking on trusted operational data, governance, AI readiness and measurable business value.</p>
+      </div>
+      <div class="related-grid">
+        <a class="related-card" href="dont-boil-the-ocean.html"><h3>Don’t Boil the Ocean</h3><p>Fix the critical data first.</p></a><a class="related-card" href="building-business-trust.html"><h3>Building Business Trust</h3><p>Create buy-in through visible wins.</p></a>
+      </div>
     </div>
-
-</section>
+  </section>
+</main>
 
 <footer>
-    <div>Data assurance • AI readiness • Governance • Operational improvement</div>
+  <div class="container footer-inner">
     <div>© 2026 VIZIQ Data Assurance. All rights reserved.</div>
+    <div>Data assurance • AI readiness • Governance • Operational improvement</div>
+  </div>
 </footer>
-
 </body>
 </html>
