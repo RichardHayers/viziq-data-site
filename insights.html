@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Insights | VIZIQ Data Assurance</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Insights | Operational Data, Governance & AI Readiness | VIZIQ</title>
-  <meta name="description" content="Practical VIZIQ insights on operational data, governance, AI readiness, business buy-in, and measurable improvement across complex organisations." />
+  <meta name="description" content="Practical VIZIQ insight on operational data, governance, AI readiness, business trust, and measurable improvement across complex organisations." />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
@@ -27,375 +26,357 @@
 
   <style>
     :root {
-      --primary: #0099A8;
-      --primary-dark: #007987;
-      --dark: #07191e;
-      --dark-2: #0f2b32;
-      --text: #334155;
-      --muted: #64748b;
-      --light: #f8fafc;
-      --border: #e2e8f0;
-      --white: #ffffff;
-      --shadow: 0 24px 70px rgba(15, 23, 42, 0.10);
+      --teal: #0099A8;
+      --teal-light: #23C6D4;
+      --navy: #07191E;
+      --ink: #0E1F24;
+      --slate: #5A6A70;
+      --mist: #EEF7F8;
+      --warm: #F5F1EA;
+      --white: #FFFFFF;
+      --line: rgba(14,31,36,0.12);
+      --shadow: 0 28px 70px rgba(7, 25, 30, 0.20);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
     .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    header {
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
     }
 
     .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.90);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(14,31,36,0.08);
+    }
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
-      gap: 24px;
+      padding: 18px 24px;
+      max-width: 1180px;
+      margin: auto;
     }
-
     .logo {
       font-weight: 900;
-      font-size: 24px;
-      letter-spacing: 2px;
-      color: var(--primary);
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 20px;
     }
-
+    .logo span { color: var(--teal); }
     .nav-links {
       display: flex;
-      align-items: center;
       gap: 24px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--dark);
+      align-items: center;
     }
-
     .nav-links a {
-      opacity: 0.82;
+      color: rgba(14,31,36,0.72);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
     }
-
     .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--primary);
-      opacity: 1;
-    }
+    .nav-links a.active { color: var(--teal); }
 
-    .nav-button {
-      background: var(--primary);
-      color: white !important;
-      padding: 10px 18px;
-      border-radius: 999px;
-      opacity: 1 !important;
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 0.96;
+      letter-spacing: -0.058em;
+      margin-bottom: 28px;
     }
+    h2 {
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+    h3 { font-size: 22px; margin-bottom: 12px; }
+    p {
+      color: var(--slate);
+      font-size: 18px;
+      line-height: 1.62;
+    }
+    h1 span, h2 span { color: var(--teal-light); }
 
     .hero {
-      background:
-        linear-gradient(90deg, rgba(7,25,30,0.95), rgba(7,25,30,0.70)),
-        url('images/viziq-hero.png') center/cover;
-      color: white;
-      padding: 120px 0 100px;
       position: relative;
       overflow: hidden;
+      color: var(--white);
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(7,25,30,0.94) 0%, rgba(7,25,30,0.76) 48%, rgba(7,25,30,0.28) 100%),
+        url('images/viziq-hero.png') center/cover;
     }
-
-    .hero:after {
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 58px 58px;
+      opacity: 0.20;
+    }
+    .hero::after {
       content: "V";
       position: absolute;
       right: 4%;
-      bottom: -90px;
+      bottom: -120px;
       font-size: 360px;
+      line-height: 1;
       font-weight: 900;
-      color: rgba(0,153,168,0.10);
+      color: rgba(35,198,212,0.10);
       pointer-events: none;
     }
-
     .hero-content {
-      max-width: 820px;
       position: relative;
       z-index: 2;
+      max-width: 900px;
     }
-
-    .eyebrow {
-      color: #7ddce5;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.02;
-      margin-bottom: 26px;
-      letter-spacing: -2px;
-    }
-
     .hero p {
+      color: rgba(255,255,255,0.82);
       font-size: 22px;
-      max-width: 760px;
-      color: rgba(255,255,255,0.88);
+      line-height: 1.55;
+      max-width: 800px;
       margin-bottom: 34px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 24px;
-      border-radius: 14px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--teal-light);
       font-weight: 800;
-      transition: all 0.2s ease;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: var(--teal-light);
+      display: inline-block;
     }
 
-    .button-primary {
-      background: var(--primary);
+    .section { padding: 92px 0; }
+    .section-title { max-width: 830px; margin-bottom: 42px; }
+    .center { text-align: center; }
+    .center .section-title { margin-left: auto; margin-right: auto; }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 14px 24px;
+      background: var(--teal);
       color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--teal);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
-
-    .button-secondary {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.22);
-      color: white;
-    }
-
-    .button:hover {
+    .btn:hover {
       transform: translateY(-2px);
-      opacity: 0.92;
+      box-shadow: 0 14px 36px rgba(0,153,168,0.34);
+      background: var(--teal-light);
     }
-
-    section {
-      padding: 90px 0;
-    }
-
-    .section-header {
-      max-width: 780px;
-      margin-bottom: 42px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.1;
-      color: var(--dark);
-      margin-bottom: 18px;
-      letter-spacing: -1px;
-    }
-
-    .section-header p {
-      font-size: 19px;
-      color: var(--muted);
+    .btn.secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border-color: rgba(255,255,255,0.34);
     }
 
     .featured {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1.04fr 0.96fr;
       gap: 34px;
       align-items: stretch;
     }
-
-    .featured-card {
-      background: var(--dark);
+    .feature-panel {
+      border-radius: 34px;
+      padding: 48px;
       color: white;
-      border-radius: 28px;
-      padding: 44px;
-      min-height: 470px;
       position: relative;
       overflow: hidden;
+      min-height: 500px;
       box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(35,198,212,0.26), transparent 34%),
+        linear-gradient(135deg, var(--navy), var(--ink));
     }
-
-    .featured-card:before {
+    .feature-panel::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(0,153,168,0.35), transparent 34%),
-        radial-gradient(circle at 85% 60%, rgba(0,153,168,0.20), transparent 34%);
-      pointer-events: none;
+      width: 520px;
+      height: 520px;
+      right: -220px;
+      bottom: -220px;
+      background: radial-gradient(circle, rgba(0,153,168,0.36), transparent 64%);
     }
-
-    .featured-card > * {
-      position: relative;
-      z-index: 2;
+    .feature-panel > * { position: relative; z-index: 2; }
+    .feature-panel h2 {
+      color: white;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.02;
     }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0,153,168,0.14);
-      color: #8be8ef;
-      border: 1px solid rgba(0,153,168,0.35);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-
-    .featured-card h2 {
-      font-size: clamp(34px, 4vw, 50px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-      letter-spacing: -1.2px;
-    }
-
-    .featured-card p {
-      font-size: 19px;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 26px;
-    }
+    .feature-panel p { color: rgba(255,255,255,0.78); max-width: 780px; }
 
     .featured-list {
       display: grid;
-      gap: 16px;
+      gap: 14px;
       margin-top: 30px;
     }
-
     .featured-list div {
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 16px;
-      border-radius: 16px;
-      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 18px;
+      padding: 17px 18px;
+      color: rgba(255,255,255,0.88);
+      font-weight: 800;
     }
 
     .visual-panel {
-      background:
-        linear-gradient(135deg, rgba(0,153,168,0.18), rgba(7,25,30,0.94)),
-        url('images/viziq-data-trust.png') center/cover;
-      border-radius: 28px;
-      min-height: 470px;
-      box-shadow: var(--shadow);
-      position: relative;
+      min-height: 500px;
+      border-radius: 34px;
       overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(7,25,30,0.08), rgba(7,25,30,0.84)),
+        url('images/viziq-data-trust.png') center/cover;
     }
-
-    .visual-panel:after {
-      content: "No stock imagery. No AI hype. Practical operational insight.";
+    .visual-panel::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 26px;
+      pointer-events: none;
+    }
+    .visual-note {
       position: absolute;
       left: 26px;
       right: 26px;
       bottom: 26px;
-      background: rgba(7,25,30,0.82);
-      color: white;
-      padding: 18px 20px;
-      border-radius: 18px;
-      font-weight: 800;
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.92);
+      border-radius: 22px;
+      padding: 22px;
+      color: var(--ink);
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.16);
     }
+    .visual-note span {
+      display: block;
+      color: var(--teal);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .warm-band { background: var(--warm); }
 
     .insight-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
     }
-
     .insight-card {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 26px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 14px 40px rgba(7,25,30,0.07);
       display: flex;
       flex-direction: column;
       min-height: 100%;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
-
+    .insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 58px rgba(7,25,30,0.14);
+    }
     .card-image {
-      min-height: 210px;
+      min-height: 220px;
       background: var(--card-bg) center/cover;
       position: relative;
     }
-
-    .card-image:after {
+    .card-image::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(7,25,30,0.04), rgba(7,25,30,0.38));
+      background: linear-gradient(180deg, rgba(7,25,30,0.02), rgba(7,25,30,0.42));
     }
-
     .card-body {
-      padding: 28px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
-
-    .card-body .category {
-      color: var(--primary);
+    .category {
+      color: var(--teal);
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 900;
-      letter-spacing: 1.4px;
-      margin-bottom: 12px;
-    }
-
-    .card-body h3 {
-      font-size: 25px;
-      line-height: 1.18;
-      color: var(--dark);
+      letter-spacing: 0.12em;
       margin-bottom: 14px;
     }
-
+    .card-body h3 {
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
     .card-body p {
-      color: var(--muted);
-      margin-bottom: 22px;
       flex: 1;
+      font-size: 17px;
+      margin-bottom: 22px;
     }
-
     .read-link {
-      color: var(--primary);
+      color: var(--teal);
       font-weight: 900;
-    }
-
-    .principles {
-      background: var(--light);
+      text-decoration: none;
     }
 
     .principle-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
     }
-
     .principle {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
       padding: 28px;
-      min-height: 220px;
+      min-height: 230px;
+      box-shadow: 0 14px 40px rgba(7,25,30,0.06);
     }
-
     .principle span {
       display: inline-flex;
       width: 42px;
@@ -403,233 +384,221 @@
       align-items: center;
       justify-content: center;
       background: rgba(0,153,168,0.10);
-      color: var(--primary);
+      color: var(--teal);
       border-radius: 12px;
       font-weight: 900;
       margin-bottom: 18px;
     }
-
     .principle h3 {
-      color: var(--dark);
       font-size: 21px;
       margin-bottom: 12px;
     }
-
     .principle p {
-      color: var(--muted);
       font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .quote-band {
+      background:
+        radial-gradient(circle at 18% 20%, rgba(35,198,212,0.22), transparent 28%),
+        linear-gradient(135deg, var(--navy), var(--ink));
+      color: white;
+    }
+    .quote-band p { color: rgba(255,255,255,0.76); }
+    .quote-text {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      max-width: 900px;
+      margin-bottom: 18px;
     }
 
     .cta {
       background:
-        linear-gradient(90deg, rgba(7,25,30,0.94), rgba(7,25,30,0.68)),
+        linear-gradient(90deg, rgba(7,25,30,0.92), rgba(7,25,30,0.62)),
         url('images/viziq-proof-impact.png') center/cover;
       color: white;
-      text-align: center;
       padding: 92px 0;
+      text-align: center;
     }
-
-    .cta h2 {
-      font-size: clamp(32px, 5vw, 54px);
-      margin-bottom: 18px;
-      line-height: 1.08;
-    }
-
     .cta p {
-      font-size: 20px;
+      color: rgba(255,255,255,0.78);
       max-width: 760px;
-      margin: 0 auto 28px;
-      color: rgba(255,255,255,0.86);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     footer {
-      background: var(--dark);
-      color: rgba(255,255,255,0.74);
-      padding: 34px 0;
+      background: #061317;
+      color: rgba(255,255,255,0.62);
+      padding: 28px 0;
+      font-size: 14px;
     }
-
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      align-items: center;
+      gap: 18px;
       flex-wrap: wrap;
-      font-size: 14px;
-    }
-
-    .footer-brand {
-      color: white;
-      font-weight: 900;
-      letter-spacing: 1.5px;
     }
 
     @media (max-width: 920px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .featured,
-      .insight-grid,
-      .principle-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 90px 0 76px;
-      }
-
-      section {
-        padding: 70px 0;
-      }
+      .nav-links { display: none; }
+      .hero { min-height: auto; padding: 86px 0; }
+      .featured, .insight-grid, .principle-grid { grid-template-columns: 1fr; }
+      .feature-panel, .visual-panel { min-height: auto; }
+      .feature-panel { padding: 34px; }
+      .visual-panel { min-height: 420px; }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a class="logo" href="index.html">VIZIQ</a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="approach.html">Approach</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="insights.html">Insights</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">VIZIQ<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="approach.html">Approach</a>
+      <a href="about.html">About</a>
+      <a href="insights.html" class="active">Insights</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="eyebrow">VIZIQ Insights</div>
-        <h1>Practical thinking for trusted data, governance and AI readiness.</h1>
-        <p>Executive-level insight for organisations that need operational data they can trust, AI foundations that can scale, and improvement programmes that deliver measurable business value.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#latest-insights">Explore insights</a>
-          <a class="button button-secondary" href="contact.html">Discuss your challenge</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container featured">
-        <article class="featured-card">
-          <div class="tag">Featured thinking</div>
-          <h2>Fix what matters first. Prove value early. Scale from trust.</h2>
-          <p>VIZIQ insights are written for real operating environments, not perfect strategy decks. The focus is practical: identify the data that matters, improve it visibly, build business confidence, and create the conditions for analytics and AI to work.</p>
-
-          <div class="featured-list">
-            <div>Operational data quality should be tied to business outcomes.</div>
-            <div>AI readiness starts with governance, ownership and trust.</div>
-            <div>Small, critical improvements beat expensive enterprise-wide data theatre.</div>
-          </div>
-        </article>
-
-        <div class="visual-panel"></div>
-      </div>
-    </section>
-
-    <section id="latest-insights" class="principles">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Latest insight papers</div>
-          <h2>Three practical perspectives for leaders preparing data, governance and AI foundations.</h2>
-          <p>These pages are designed as short, useful insight papers. They support search visibility, LinkedIn distribution, and client conversations without feeling like generic blog content.</p>
-        </div>
-
-        <div class="insight-grid">
-          <article class="insight-card">
-            <div class="card-image" style="--card-bg: url('images/viziq-ai-readiness.png');"></div>
-            <div class="card-body">
-              <div class="category">Governance and AI</div>
-              <h3>Governance Before AI</h3>
-              <p>Why trusted operational data, ownership and accountability matter more than algorithms when organisations want AI to deliver real value.</p>
-              <a class="read-link" href="insights/governance-before-ai.html">Read insight</a>
-            </div>
-          </article>
-
-          <article class="insight-card">
-            <div class="card-image" style="--card-bg: url('images/viziq-operational-data.png');"></div>
-            <div class="card-body">
-              <div class="category">Critical data focus</div>
-              <h3>Don’t Boil the Ocean</h3>
-              <p>How to avoid expensive enterprise-wide data programmes by targeting the critical datasets that drive operational value first.</p>
-              <a class="read-link" href="insights/dont-boil-the-ocean.html">Read insight</a>
-            </div>
-          </article>
-
-          <article class="insight-card">
-            <div class="card-image" style="--card-bg: url('images/viziq-proof-impact.png');"></div>
-            <div class="card-body">
-              <div class="category">Business buy-in</div>
-              <h3>Building Business Trust</h3>
-              <p>Why measurable operational wins, visible reporting improvements and trusted data build stronger buy-in than strategy decks alone.</p>
-              <a class="read-link" href="insights/building-business-trust.html">Read insight</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">VIZIQ perspective</div>
-          <h2>What the insight section is designed to reinforce.</h2>
-          <p>The goal is not to publish content for the sake of content. It is to build authority around the VIZIQ proposition: trusted operational data, practical governance, AI readiness and measurable improvement.</p>
-        </div>
-
-        <div class="principle-grid">
-          <div class="principle">
-            <span>1</span>
-            <h3>Start with critical data</h3>
-            <p>Not every dataset deserves equal attention. Focus first on the data that affects decisions, risk, compliance, adoption and performance.</p>
-          </div>
-
-          <div class="principle">
-            <span>2</span>
-            <h3>Make trust visible</h3>
-            <p>Business buy-in grows when people can see improvements in reporting, system confidence and operational outcomes.</p>
-          </div>
-
-          <div class="principle">
-            <span>3</span>
-            <h3>Prepare for AI properly</h3>
-            <p>AI readiness depends on governance, ownership, quality controls and human confidence in the data behind the model.</p>
-          </div>
-
-          <div class="principle">
-            <span>4</span>
-            <h3>Scale from proof</h3>
-            <p>Start small, prove value, then expand. This creates momentum without wasting money trying to fix everything at once.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <h2>Need trusted operational data before the next big system, reporting or AI decision?</h2>
-        <p>VIZIQ helps organisations target the data that matters most, improve confidence, and build practical foundations for analytics, governance and AI.</p>
-        <a class="button button-primary" href="contact.html">Start the conversation</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div><span class="footer-brand">VIZIQ</span> © 2026 VIZIQ Data Assurance. All rights reserved.</div>
-      <div>Data assurance • AI readiness • Governance • Operational improvement</div>
+<header class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">VIZIQ Insights</div>
+    <h1>Practical thinking for data people can <span>actually trust.</span></h1>
+    <p>Short, useful insight papers for leaders who need stronger operational data, clearer governance, better business buy-in and AI foundations that will stand up in the real world.</p>
+    <div class="btn-row">
+      <a href="#latest-insights" class="btn">Explore insights</a>
+      <a href="contact.html" class="btn secondary">Discuss your challenge</a>
     </div>
-  </footer>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container featured">
+    <article class="feature-panel">
+      <div class="eyebrow">Featured thinking</div>
+      <h2>Fix what matters first. Prove value early. Scale from trust.</h2>
+      <p>VIZIQ insights are written for real operating environments, not perfect strategy decks. The focus is simple: identify the critical data, improve it visibly, build business confidence, then expand from proof.</p>
+
+      <div class="featured-list">
+        <div>Operational data quality must connect directly to business outcomes.</div>
+        <div>AI readiness starts with governance, ownership and trust.</div>
+        <div>Small, targeted improvements beat expensive enterprise-wide data theatre.</div>
+      </div>
+    </article>
+
+    <div class="visual-panel">
+      <div class="visual-note"><span>VIZIQ perspective</span>No stock thinking. No AI hype. Just practical operational insight.</div>
+    </div>
+  </div>
+</section>
+
+<section id="latest-insights" class="section warm-band">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Latest insight papers</div>
+      <h2>Three practical perspectives for leaders preparing data, governance and AI foundations.</h2>
+      <p>These insight papers support client conversations, search visibility and LinkedIn distribution while reinforcing the core VIZIQ proposition: trusted operational data creates measurable business value.</p>
+    </div>
+
+    <div class="insight-grid">
+      <article class="insight-card">
+        <div class="card-image" style="--card-bg: url('images/viziq-ai-readiness.png');"></div>
+        <div class="card-body">
+          <div class="category">Governance and AI</div>
+          <h3>Governance Before AI</h3>
+          <p>Why trusted operational data, ownership and accountability matter more than algorithms when organisations want AI to deliver real value.</p>
+          <a class="read-link" href="insights/governance-before-ai.html">Read insight</a>
+        </div>
+      </article>
+
+      <article class="insight-card">
+        <div class="card-image" style="--card-bg: url('images/viziq-operational-data.png');"></div>
+        <div class="card-body">
+          <div class="category">Critical data focus</div>
+          <h3>Don’t Boil the Ocean</h3>
+          <p>How to avoid expensive enterprise-wide data programmes by targeting the critical datasets that drive operational value first.</p>
+          <a class="read-link" href="insights/dont-boil-the-ocean.html">Read insight</a>
+        </div>
+      </article>
+
+      <article class="insight-card">
+        <div class="card-image" style="--card-bg: url('images/viziq-proof-impact.png');"></div>
+        <div class="card-body">
+          <div class="category">Business buy-in</div>
+          <h3>Building Business Trust</h3>
+          <p>Why measurable operational wins, visible reporting improvements and trusted data build stronger buy-in than strategy decks alone.</p>
+          <a class="read-link" href="insights/building-business-trust.html">Read insight</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">VIZIQ perspective</div>
+      <h2>What the insight section is designed to reinforce.</h2>
+      <p>This is not content for the sake of content. It is a practical library around the VIZIQ point of view: trusted operational data, sensible governance, AI readiness and visible improvement.</p>
+    </div>
+
+    <div class="principle-grid">
+      <div class="principle">
+        <span>1</span>
+        <h3>Start with critical data</h3>
+        <p>Not every dataset deserves equal attention. Focus first on the data that affects decisions, risk, compliance, adoption and performance.</p>
+      </div>
+
+      <div class="principle">
+        <span>2</span>
+        <h3>Make trust visible</h3>
+        <p>Business buy-in grows when people can see improvements in reporting, system confidence and operational outcomes.</p>
+      </div>
+
+      <div class="principle">
+        <span>3</span>
+        <h3>Prepare for AI properly</h3>
+        <p>AI readiness depends on governance, ownership, quality controls and human confidence in the data behind the model.</p>
+      </div>
+
+      <div class="principle">
+        <span>4</span>
+        <h3>Scale from proof</h3>
+        <p>Start small, prove value, then expand. This creates momentum without wasting money trying to fix everything at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section quote-band">
+  <div class="container">
+    <div class="eyebrow">The thread running through every insight</div>
+    <div class="quote-text">AI will not rescue bad data. It will usually expose it, accelerate it, or make it more expensive.</div>
+    <p>That is why VIZIQ starts with the operational data, ownership, controls and business processes that make trusted decisions possible.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Need trusted operational data before the next big system, reporting or AI decision?</h2>
+    <p>VIZIQ helps organisations target the data that matters most, improve confidence, and build practical foundations for analytics, governance and AI.</p>
+    <a href="contact.html" class="btn">Start the conversation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 VIZIQ Data Assurance. All rights reserved.</div>
+    <div>Data assurance • AI readiness • Governance • Operational improvement</div>
+  </div>
+</footer>
 </body>
 </html>
