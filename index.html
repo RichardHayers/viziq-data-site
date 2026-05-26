@@ -1,655 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>VIZIQ Data Assurance | Data You Can Trust. AI That Works.</title>
+  <title>VIZIQ Data Assurance | Data You Can Trust. Value You Can Prove.</title>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="VIZIQ helps organisations fix broken data, reduce operational risk, and unlock real-world AI value across real estate, facilities management, and data centres." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VIZIQ helps organisations identify the operational data that matters most, improve it in targeted and measurable ways, and turn technology investment into trusted business outcomes." />
 
-<!-- Google Analytics: replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-38PRV99QD3');
-</script>
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/wo1k59rk6t";
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "wo1k59rk6t");
-</script>
-<style>
-  :root {
-    --teal: #0099A8;
-    --teal-light: #23C6D4;
-    --navy: #07191E;
-    --ink: #0E1F24;
-    --slate: #5A6A70;
-    --mist: #EEF7F8;
-    --warm: #F5F1EA;
-    --white: #FFFFFF;
-    --line: rgba(14,31,36,0.12);
-    --shadow: 0 28px 70px rgba(7, 25, 30, 0.20);
-  }
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-38PRV99QD3');
+  </script>
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #ffffff;
-    color: var(--ink);
-  }
-  a { color: inherit; }
-  img { max-width: 100%; display: block; }
-  .container {
-    max-width: 1180px;
-    margin: auto;
-    padding: 0 24px;
-  }
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/wo1k59rk6t";
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wo1k59rk6t");
+  </script>
 
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: rgba(255,255,255,0.90);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(14,31,36,0.08);
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 24px;
-    max-width: 1180px;
-    margin: auto;
-  }
-  .logo {
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 20px;
-  }
-  .logo span { color: var(--teal); }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-  .nav-links a {
-    color: rgba(14,31,36,0.72);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .nav-links a:hover { color: var(--teal); }
+  <style>
+    :root {
+      --teal: #0099A8;
+      --teal-light: #23C6D4;
+      --navy: #07191E;
+      --ink: #0E1F24;
+      --slate: #5A6A70;
+      --mist: #EEF7F8;
+      --warm: #F5F1EA;
+      --white: #FFFFFF;
+      --line: rgba(14,31,36,0.12);
+      --shadow: 0 28px 70px rgba(7, 25, 30, 0.20);
+    }
 
-  h1, h2, h3, p { margin-top: 0; }
-  h1 {
-    font-size: clamp(46px, 7vw, 82px);
-    line-height: 0.96;
-    letter-spacing: -0.058em;
-    margin-bottom: 28px;
-  }
-  h2 {
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
-    margin-bottom: 18px;
-  }
-  h3 { font-size: 22px; margin-bottom: 12px; }
-  p {
-    color: var(--slate);
-    font-size: 18px;
-    line-height: 1.62;
-  }
-  h1 span, h2 span { color: var(--teal-light); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-  .hero {
-    position: relative;
-    overflow: hidden;
-    color: var(--white);
-    min-height: 660px;
-    display: flex;
-    align-items: center;
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.94) 0%, rgba(7,25,30,0.76) 45%, rgba(7,25,30,0.25) 100%),
-      var(--hero-image) center/cover;
-  }
-  .hero.small {
-    min-height: 460px;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
-    background-size: 58px 58px;
-    opacity: 0.20;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 620px;
-    height: 620px;
-    right: -180px;
-    bottom: -180px;
-    background: radial-gradient(circle, rgba(0,153,168,0.54), transparent 62%);
-    filter: blur(8px);
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-  }
-  .hero p {
-    color: rgba(255,255,255,0.82);
-    font-size: 22px;
-    line-height: 1.55;
-    max-width: 760px;
-    margin-bottom: 34px;
-  }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+    }
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--teal-light);
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 13px;
-    margin-bottom: 22px;
-  }
-  .eyebrow::before {
-    content: "";
-    width: 36px;
-    height: 2px;
-    background: var(--teal-light);
-    display: inline-block;
-  }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
 
-  .section { padding: 92px 0; }
-  .section-title { max-width: 790px; margin-bottom: 42px; }
-  .center { text-align: center; }
-  .center .section-title { margin-left: auto; margin-right: auto; }
+    .container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
+    }
 
-  .btn-row {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    padding: 14px 24px;
-    background: var(--teal);
-    color: white;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 800;
-    border: 1px solid var(--teal);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 36px rgba(0,153,168,0.34);
-    background: var(--teal-light);
-  }
-  .btn.secondary {
-    background: rgba(255,255,255,0.08);
-    color: var(--white);
-    border-color: rgba(255,255,255,0.34);
-  }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.90);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(14,31,36,0.08);
+    }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-  }
-  .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .card {
-    border: 1px solid var(--line);
-    padding: 30px;
-    border-radius: 26px;
-    background: #ffffff;
-    box-shadow: 0 14px 40px rgba(7,25,30,0.07);
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 24px 58px rgba(7,25,30,0.14);
-  }
-  .card-number {
-    color: var(--teal);
-    font-weight: 900;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-  }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      max-width: 1180px;
+      margin: auto;
+    }
 
-  .proof-strip {
-    background: linear-gradient(90deg, var(--mist), #ffffff, var(--warm));
-    border-bottom: 1px solid rgba(14,31,36,0.08);
-  }
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px 0;
-  }
-  .proof-item {
-    font-weight: 900;
-    color: var(--ink);
-    font-size: 19px;
-  }
-  .proof-item span {
-    display: block;
-    color: var(--slate);
-    font-weight: 400;
-    margin-top: 7px;
-    font-size: 14px;
-    line-height: 1.45;
-  }
+    .logo {
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 20px;
+    }
 
-  .image-split {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 44px;
-    align-items: center;
-  }
-  .photo-card {
-    min-height: 500px;
-    border-radius: 32px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow);
-    background: var(--photo-image) center/cover;
-  }
-  .photo-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7,25,30,0.10), rgba(7,25,30,0.78));
-  }
-  .floating-note {
-    position: absolute;
-    z-index: 2;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-    background: rgba(255,255,255,0.92);
-    border-radius: 22px;
-    padding: 22px;
-    color: var(--ink);
-    font-weight: 800;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.16);
-  }
-  .floating-note span {
-    display: block;
-    color: var(--teal);
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
+    .logo span { color: var(--teal); }
 
-  .dark-block {
-    background:
-      radial-gradient(circle at 20% 10%, rgba(0,153,168,0.22), transparent 28%),
-      linear-gradient(135deg, var(--navy), var(--ink));
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  .dark-block p { color: rgba(255,255,255,0.72); }
-  .dark-block .card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    color: white;
-    box-shadow: none;
-  }
-  .dark-block .card h3 { color: white; }
-  .dark-block .card p { color: rgba(255,255,255,0.72); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
 
-  .service-card {
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 30px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    isolation: isolate;
-  }
-  .service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.35s ease;
-    background-image: var(--card-image);
-  }
-  .service-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, rgba(7,25,30,0.08), rgba(7,25,30,0.90));
-  }
-  .service-card:hover::before { transform: scale(1.06); }
-  .service-card p { color: rgba(255,255,255,0.78); }
+    .nav-links a {
+      color: rgba(14,31,36,0.72);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-  .feature {
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.90), rgba(7,25,30,0.55)),
-      var(--feature-image) center/cover;
-    color: white;
-    border-radius: 34px;
-    padding: 54px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-  }
-  .feature p { color: rgba(255,255,255,0.78); max-width: 780px; }
-  .quote {
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-    margin: 0 0 18px;
-    color: white;
-    font-weight: 900;
-    max-width: 840px;
-  }
-  .pill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 26px;
-  }
-  .pill {
-    padding: 10px 14px;
-    border-radius: 999px;
-    background: rgba(0,153,168,0.16);
-    color: var(--teal-light);
-    border: 1px solid rgba(35,198,212,0.30);
-    font-weight: 800;
-    font-size: 14px;
-  }
+    .nav-links a:hover { color: var(--teal); }
 
-  .outcome-band { background: var(--warm); }
-  .steps { counter-reset: steps; }
-  .step {
-    display: grid;
-    grid-template-columns: 84px 1fr;
-    gap: 24px;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(14,31,36,0.10);
-  }
-  .step::before {
-    counter-increment: steps;
-    content: "0" counter(steps);
-    color: var(--teal);
-    font-weight: 900;
-    font-size: 31px;
-  }
+    h1, h2, h3, p { margin-top: 0; }
 
-  .contact-form {
-    max-width: 760px;
-    margin: 38px auto 0;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.18);
-    backdrop-filter: blur(18px);
-    border-radius: 30px;
-    padding: 28px;
-    text-align: left;
-    box-shadow: var(--shadow);
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .contact-form label {
-    display: block;
-    color: rgba(255,255,255,0.84);
-    font-size: 14px;
-    font-weight: 800;
-    margin: 0 0 8px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.12);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 16px;
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: rgba(255,255,255,0.48); }
-  .contact-form textarea { min-height: 130px; resize: vertical; }
-  .contact-form button { cursor: pointer; width: auto; }
-  .form-note {
-    margin: 14px 0 0;
-    font-size: 14px;
-    color: rgba(255,255,255,0.62);
-  }
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 0.96;
+      letter-spacing: -0.058em;
+      margin-bottom: 28px;
+      max-width: 920px;
+    }
 
-  .cta {
-    background:
-      linear-gradient(90deg, rgba(7,25,30,0.92), rgba(7,25,30,0.62)),
-      url('images/viziq-proof-impact.png') center/cover;
-    color: white;
-    padding: 92px 0;
-    text-align: center;
-  }
-  .cta p {
-    color: rgba(255,255,255,0.78);
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    h2 {
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
 
-  footer {
-    background: #061317;
-    color: rgba(255,255,255,0.62);
-    padding: 28px 0;
-    font-size: 14px;
-  }
-  .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
+    h3 { font-size: 22px; margin-bottom: 12px; }
 
-  @media (max-width: 920px) {
+    p {
+      color: var(--slate);
+      font-size: 18px;
+      line-height: 1.62;
+    }
 
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 14px;
-  }
+    h1 span, h2 span { color: var(--teal-light); }
 
-  .nav-inner {
-    flex-direction: column;
-    align-items: center;
-  }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(7,25,30,0.94) 0%, rgba(7,25,30,0.76) 45%, rgba(7,25,30,0.25) 100%),
+        var(--hero-image) center/cover;
+    }
 
-  .hero {
-    min-height: auto;
-    padding: 86px 0;
-  }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 58px 58px;
+      opacity: 0.20;
+    }
 
-  .image-split,
-  .grid,
-  .grid.two,
-  .proof-grid,
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      right: -180px;
+      bottom: -180px;
+      background: radial-gradient(circle, rgba(0,153,168,0.54), transparent 62%);
+      filter: blur(8px);
+    }
 
-  .photo-card {
-    min-height: 420px;
-  }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 850px;
+    }
 
-  .feature {
-    padding: 34px;
-  }
+    .hero p {
+      color: rgba(255,255,255,0.82);
+      font-size: 22px;
+      line-height: 1.55;
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
 
-  .step {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-}
-  }
-</style>
+    .brand-watermark {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 2;
+      opacity: 0.10;
+    }
 
+    .brand-watermark::before {
+      content: "VIZIQ";
+      position: absolute;
+      right: 4%;
+      bottom: 8%;
+      font-size: clamp(72px, 13vw, 170px);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: var(--teal-light);
+      transform: rotate(-7deg);
+    }
+
+    .brand-watermark::after {
+      content: "🐾";
+      position: absolute;
+      right: 13%;
+      bottom: 31%;
+      font-size: clamp(34px, 5vw, 74px);
+      opacity: 0.7;
+      transform: rotate(-12deg);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--teal-light);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: var(--teal-light);
+      display: inline-block;
+    }
+
+    .section { padding: 92px 0; }
+
+    .section-title {
+      max-width: 790px;
+      margin-bottom: 42px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 14px 24px;
+      background: var(--teal);
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--teal);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(0,153,168,0.34);
+      background: var(--teal-light);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border-color: rgba(255,255,255,0.34);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      border: 1px solid var(--line);
+      padding: 30px;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(7,25,30,0.07);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 58px rgba(7,25,30,0.14);
+    }
+
+    .card-number {
+      color: var(--teal);
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .proof-strip {
+      background: linear-gradient(90deg, var(--mist), #ffffff, var(--warm));
+      border-bottom: 1px solid rgba(14,31,36,0.08);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px 0;
+    }
+
+    .proof-item {
+      font-weight: 900;
+      color: var(--ink);
+      font-size: 19px;
+    }
+
+    .proof-item span {
+      display: block;
+      color: var(--slate);
+      font-weight: 400;
+      margin-top: 7px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .image-split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .image-split.reverse {
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+
+    .photo-card {
+      min-height: 500px;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      background: var(--photo-image) center/cover;
+    }
+
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,25,30,0.10), rgba(7,25,30,0.78));
+    }
+
+    .photo-card::before {
+      content: "🐾";
+      position: absolute;
+      z-index: 2;
+      right: 24px;
+      top: 20px;
+      color: rgba(35,198,212,0.34);
+      font-size: 44px;
+      transform: rotate(-12deg);
+    }
+
+    .floating-note {
+      position: absolute;
+      z-index: 3;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      background: rgba(255,255,255,0.92);
+      border-radius: 22px;
+      padding: 22px;
+      color: var(--ink);
+      font-weight: 800;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+    }
+
+    .floating-note span {
+      display: block;
+      color: var(--teal);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .dark-block {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(0,153,168,0.22), transparent 28%),
+        linear-gradient(135deg, var(--navy), var(--ink));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dark-block p { color: rgba(255,255,255,0.72); }
+
+    .service-card {
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.35s ease;
+      background-image: var(--card-image);
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(7,25,30,0.08), rgba(7,25,30,0.90));
+    }
+
+    .service-card:hover::before { transform: scale(1.06); }
+
+    .service-card p { color: rgba(255,255,255,0.78); }
+
+    .feature {
+      background:
+        linear-gradient(90deg, rgba(7,25,30,0.90), rgba(7,25,30,0.55)),
+        var(--feature-image) center/cover;
+      color: white;
+      border-radius: 34px;
+      padding: 54px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature::after {
+      content: "🐾";
+      position: absolute;
+      right: 36px;
+      bottom: 28px;
+      font-size: 62px;
+      opacity: 0.14;
+      transform: rotate(-10deg);
+    }
+
+    .feature p {
+      color: rgba(255,255,255,0.78);
+      max-width: 780px;
+    }
+
+    .quote {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+      color: white;
+      font-weight: 900;
+      max-width: 840px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(0,153,168,0.16);
+      color: var(--teal-light);
+      border: 1px solid rgba(35,198,212,0.30);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .cta {
+      background:
+        linear-gradient(90deg, rgba(7,25,30,0.92), rgba(7,25,30,0.62)),
+        url('images/viziq-proof-impact.png') center/cover;
+      color: white;
+      padding: 92px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::after {
+      content: "VIZIQ";
+      position: absolute;
+      right: 5%;
+      bottom: -20px;
+      font-size: clamp(70px, 12vw, 160px);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: rgba(35,198,212,0.10);
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.78);
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background: #061317;
+      color: rgba(255,255,255,0.62);
+      padding: 28px 0;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        width: 100%;
+        margin-top: 14px;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 86px 0;
+      }
+
+      .image-split,
+      .image-split.reverse,
+      .grid,
+      .grid.two,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        min-height: 420px;
+      }
+
+      .feature {
+        padding: 34px;
+      }
+
+      .brand-watermark {
+        opacity: 0.06;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">VIZIQ<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="approach.html">Approach</a>
-      <a href="about.html">About</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html">Contact</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">VIZIQ<span>.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="approach.html">Approach</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
-<header class="hero" style="--hero-image: url('images/viziq-hero.png');">
-  <div class="container hero-content">
-    <div class="eyebrow">OPERATIONAL DATA. REAL BUSINESS VALUE.</div>
+  </nav>
 
-    <h1>Data you can trust. <span>Value you can prove.</span></h1>
-
-    <p>
-      VIZIQ helps organisations identify the operational data that matters most, improve it in targeted and measurable ways, and turn technology investment into trusted business outcomes.
-    </p>
-
-    <div class="btn-row">
-      <a href="case-studies.html" class="btn">See how it works</a>
-      <a href="contact.html" class="btn secondary">Have a quick chat</a>
+  <header class="hero" style="--hero-image: url('images/viziq-hero.png');">
+    <div class="brand-watermark"></div>
+    <div class="container hero-content">
+      <div class="eyebrow">Operational data. Real business value.</div>
+      <h1>Data you can trust. <span>Value you can prove.</span></h1>
+      <p>
+        VIZIQ helps organisations identify the operational data that matters most, improve it in targeted and measurable ways, and turn technology investment into trusted business outcomes.
+      </p>
+      <div class="btn-row">
+        <a href="case-studies.html" class="btn">See how it works</a>
+        <a href="contact.html" class="btn secondary">Have a quick chat</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="proof-strip">
-  <div class="container proof-grid">
-    <div class="proof-item">£19M annual savings<span>Delivered through targeted data quality, governance and operational control.</span></div>
-    <div class="proof-item">Business value first<span>Focused on measurable outcomes, not endless data cleansing programmes.</span></div>
-    <div class="proof-item">AI-ready foundations<span>Because AI only works when the data, process and business ownership can be trusted.</span></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container image-split">
-    <div class="photo-card" style="--photo-image: url('images/viziq-data-trust.png');">
-      <div class="floating-note"><span>Don't boil the ocean</span>Fix the data that matters first. Prove the value. Then scale with confidence.</div>
+  <section class="proof-strip">
+    <div class="container proof-grid">
+      <div class="proof-item">£19M annual savings<span>Delivered through targeted data quality, governance and operational control.</span></div>
+      <div class="proof-item">Business value first<span>Focused on measurable outcomes, not endless data cleansing programmes.</span></div>
+      <div class="proof-item">AI-ready foundations<span>Because AI only works when the data, process and business ownership can be trusted.</span></div>
     </div>
-    <div>
+  </section>
+
+  <section class="section">
+    <div class="container image-split">
+      <div class="photo-card" style="--photo-image: url('images/viziq-data-trust.png');">
+        <div class="floating-note"><span>Don't boil the ocean</span>Fix the data that matters first. Prove the value. Then scale with confidence.</div>
+      </div>
+      <div>
+        <div class="section-title">
+          <h2>Most transformation programmes fail long before the technology goes live.</h2>
+          <p>The issue is rarely just the tool, the dashboard or the AI model. It is usually the quality of the operational data, the ownership around it, and whether the business trusts the decisions being made from it.</p>
+        </div>
+        <div class="grid two">
+          <div class="card"><div class="card-number">Problem</div><h3>Too much effort in the wrong place</h3><p>Organisations can spend millions trying to fix every piece of data, only to lose momentum before real business value is delivered.</p></div>
+          <div class="card"><div class="card-number">Impact</div><h3>Weak adoption and poor ROI</h3><p>Systems lose credibility, teams create workarounds, reporting is disputed, and technology investment struggles to prove its value.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-block">
+    <div class="container">
       <div class="section-title">
-        <h2>Most transformation programmes fail long before the technology goes live.</h2>
-        <p>The issue is rarely just the tool, the dashboard or the AI model. It is usually the quality of the operational data, the ownership around it, and whether the business trusts the decisions being made from it.</p>
+        <h2>What VIZIQ does</h2>
+        <p>VIZIQ helps organisations identify the operational data that matters most, improve it in targeted and measurable ways, and build the business alignment needed to turn technology investment into real-world value.</p>
       </div>
-      <div class="grid two">
-        <div class="card"><div class="card-number">Problem</div><h3>Too much effort in the wrong place</h3><p>Organisations can spend millions trying to fix every piece of data, only to lose momentum before real business value is delivered.</p></div>
-        <div class="card"><div class="card-number">Impact</div><h3>Weak adoption and poor ROI</h3><p>Systems lose credibility, teams create workarounds, reporting is disputed, and technology investment struggles to prove its value.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section dark-block">
-  <div class="container">
-    <div class="section-title">
-      <h2>What VIZIQ does</h2>
-      <p>VIZIQ helps organisations identify the operational data that matters most, improve it in targeted and measurable ways, and build the business alignment needed to turn technology investment into real-world value.</p>
-    </div>
-    <div class="grid">
-      <div class="service-card" style="--card-image: url('images/viziq-data-assurance.png');"><div class="card-number">01</div><h3>Critical Data Assurance</h3><p>Identify, clean, validate and monitor the data that drives operational, commercial and compliance outcomes.</p></div>
-      <div class="service-card" style="--card-image: url('images/viziq-ai-readiness.png');"><div class="card-number">02</div><h3>AI & Technology Readiness</h3><p>Prepare the data, governance and operational processes needed for AI and digital initiatives to work in the real world.</p></div>
-      <div class="service-card" style="--card-image: url('images/viziq-operational-data.png');"><div class="card-number">03</div><h3>Business Value Alignment</h3><p>Connect data improvement to business priorities, stakeholder ownership, adoption and measurable return on investment.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="feature" style="--feature-image: url('images/viziq-proof-impact.png');">
-      <div class="eyebrow">Proof, not theory</div>
-      <p class="quote">Business buy-in does not come from presentations. It comes from showing measurable improvement on data that matters.</p>
-      <p>The strongest way to create momentum is not to ask the business to believe in a huge data programme. It is to take a critical dataset, use AI-assisted cleansing and expert review to improve it, and show the operational, commercial and risk impact in a way people can see.</p>
-      <div class="pill-list">
-        <span class="pill">Critical data first</span>
-        <span class="pill">AI-assisted improvement</span>
-        <span class="pill">Visible business results</span>
-        <span class="pill">Scale with confidence</span>
+      <div class="grid">
+        <div class="service-card" style="--card-image: url('images/viziq-data-assurance.png');"><div class="card-number">01</div><h3>Critical Data Assurance</h3><p>Identify, clean, validate and monitor the data that drives operational, commercial and compliance outcomes.</p></div>
+        <div class="service-card" style="--card-image: url('images/viziq-ai-readiness.png');"><div class="card-number">02</div><h3>AI & Technology Readiness</h3><p>Prepare the data, governance and operational processes needed for AI and digital initiatives to work in the real world.</p></div>
+        <div class="service-card" style="--card-image: url('images/viziq-operational-data.png');"><div class="card-number">03</div><h3>Business Value Alignment</h3><p>Connect data improvement to business priorities, stakeholder ownership, adoption and measurable return on investment.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container image-split reverse">
-    <div>
-      <div class="section-title">
-        <h2>Start small. Prove value. Build from there.</h2>
-        <p>VIZIQ is not about trying to fix every dataset across the enterprise. That is slow, expensive and often a poor investment. We focus on the data that matters most to the business outcome, then use visible results to build trust, education and wider adoption.</p>
+  <section class="section">
+    <div class="container">
+      <div class="feature" style="--feature-image: url('images/viziq-proof-impact.png');">
+        <div class="eyebrow">Proof, not theory</div>
+        <p class="quote">Business buy-in does not come from presentations. It comes from showing measurable improvement on data that matters.</p>
+        <p>The strongest way to create momentum is not to ask the business to believe in a huge data programme. It is to take a critical dataset, use AI-assisted cleansing and expert review to improve it, and show the operational, commercial and risk impact in a way people can see.</p>
+        <div class="pill-list">
+          <span class="pill">Critical data first</span>
+          <span class="pill">AI-assisted improvement</span>
+          <span class="pill">Visible business results</span>
+          <span class="pill">Scale with confidence</span>
+        </div>
       </div>
-      <div class="grid two">
-        <div class="card"><div class="card-number">01</div><h3>Target what matters</h3><p>Focus on the data linked to operational performance, compliance, risk, cost leakage or decision quality.</p></div>
-        <div class="card"><div class="card-number">02</div><h3>Show the improvement</h3><p>Use a focused proof point to demonstrate how better data changes decisions, behaviour and business outcomes.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container image-split reverse">
+      <div>
+        <div class="section-title">
+          <h2>Start small. Prove value. Build from there.</h2>
+          <p>VIZIQ is not about trying to fix every dataset across the enterprise. That is slow, expensive and often a poor investment. We focus on the data that matters most to the business outcome, then use visible results to build trust, education and wider adoption.</p>
+        </div>
+        <div class="grid two">
+          <div class="card"><div class="card-number">01</div><h3>Target what matters</h3><p>Focus on the data linked to operational performance, compliance, risk, cost leakage or decision quality.</p></div>
+          <div class="card"><div class="card-number">02</div><h3>Show the improvement</h3><p>Use a focused proof point to demonstrate how better data changes decisions, behaviour and business outcomes.</p></div>
+        </div>
+      </div>
+      <div class="photo-card" style="--photo-image: url('images/viziq-business-value.png');">
+        <div class="floating-note"><span>Real-world adoption</span>People support change faster when they can see the result, not just hear the strategy.</div>
       </div>
     </div>
-    <div class="photo-card" style="--photo-image: url('images/viziq-business-value.png');">
-      <div class="floating-note"><span>Real-world adoption</span>People support change faster when they can see the result, not just hear the strategy.</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta">
-  <div class="container">
-    <h2>If the business does not trust the data, it will not trust what the technology tells it.</h2>
-    <p>Fancy a quick, no-pressure chat about where your operational data is helping you, hurting you, or quietly holding back business value?</p>
-    <div class="btn-row" style="justify-content:center; margin-top: 28px;">
-      <a href="contact.html" class="btn">Start the conversation</a>
+  <section class="cta">
+    <div class="container">
+      <h2>If the business does not trust the data, it will not trust what the technology tells it.</h2>
+      <p>Fancy a quick, no-pressure chat about where your operational data is helping you, hurting you, or quietly holding back business value?</p>
+      <div class="btn-row" style="justify-content:center; margin-top: 28px;">
+        <a href="contact.html" class="btn">Start the conversation</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container footer-inner">
-    <div>© 2026 VIZIQ Data Assurance. All rights reserved.</div>
-    <div>Critical data assurance • AI readiness • Business value alignment • Operational improvement</div>
-  </div>
-</footer>
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 VIZIQ Data Assurance. All rights reserved.</div>
+      <div>Critical data assurance • AI readiness • Business value alignment • Operational improvement</div>
+    </div>
+  </footer>
 </body>
 </html>
