@@ -4,7 +4,7 @@
   <title>Case Studies | VIZIQ Data Assurance</title>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="VIZIQ helps organisations improve critical operational data, strengthen governance, reduce risk, build AI readiness, and unlock measurable business value." />
+<meta name="description" content="Client-safe examples showing how VIZIQ improves critical operational data, strengthens governance, reduces risk and unlocks measurable business value." />
 
 <!-- Google Analytics: replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
@@ -410,6 +410,135 @@
     font-size: 31px;
   }
 
+
+  .case-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+  .case-impact-panel {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 28px;
+    padding: 28px;
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+  }
+  .case-impact-number {
+    font-size: clamp(54px, 8vw, 96px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    color: var(--teal-light);
+    font-weight: 900;
+    margin-bottom: 14px;
+  }
+  .case-impact-panel p {
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 0;
+  }
+  .case-study-block {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 34px;
+    align-items: start;
+  }
+  .case-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+  .metric-card {
+    background: linear-gradient(135deg, var(--navy), var(--ink));
+    color: white;
+    border-radius: 30px;
+    padding: 32px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+  }
+  .metric-card::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -100px;
+    bottom: -100px;
+    background: radial-gradient(circle, rgba(0,153,168,0.46), transparent 64%);
+  }
+  .metric-card strong {
+    display: block;
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    color: var(--teal-light);
+    margin-bottom: 16px;
+  }
+  .metric-card span {
+    display: block;
+    color: rgba(255,255,255,0.76);
+    font-size: 17px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+  .case-detail {
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: #fff;
+    padding: 34px;
+    box-shadow: 0 18px 48px rgba(7,25,30,0.08);
+  }
+  .case-detail + .case-detail { margin-top: 20px; }
+  .case-label {
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .case-list {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .case-list li {
+    position: relative;
+    padding-left: 26px;
+    margin: 12px 0;
+    color: var(--slate);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .case-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+  .mini-case {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-case p { margin-bottom: 0; }
+  .mini-case .pill-list { margin-top: auto; padding-top: 22px; }
+  .client-safe-note {
+    margin-top: 26px;
+    border-left: 4px solid var(--teal);
+    padding: 16px 18px;
+    background: rgba(0,153,168,0.08);
+    border-radius: 0 18px 18px 0;
+  }
+  .client-safe-note p {
+    font-size: 16px;
+    margin: 0;
+  }
+
   .contact-form {
     max-width: 760px;
     margin: 38px auto 0;
@@ -486,9 +615,10 @@
   @media (max-width: 920px) {
     .nav-links { display: none; }
     .hero { min-height: auto; padding: 86px 0; }
-    .image-split, .grid, .grid.two, .proof-grid, .form-row { grid-template-columns: 1fr; }
+    .image-split, .grid, .grid.two, .proof-grid, .form-row, .case-hero-grid, .case-study-block { grid-template-columns: 1fr; }
     .photo-card { min-height: 420px; }
     .feature { padding: 34px; }
+    .case-sidebar { position: static; }
     .step { grid-template-columns: 1fr; gap: 8px; }
   }
 </style>
@@ -510,39 +640,97 @@
 </nav>
 <header class="hero small" style="--hero-image: url('images/viziq-proof-impact.png');">
   <div class="container hero-content">
-    <div class="eyebrow">Case Studies</div>
-    <h1>Proof, not <span>theory.</span></h1>
-    <p>Examples of how better data foundations create measurable operational and commercial value.</p>
+    <div class="case-hero-grid">
+      <div>
+        <div class="eyebrow">Case Studies</div>
+        <h1>Proof, not <span>theory.</span></h1>
+        <p>Client-safe examples of how better operational data, clearer governance and pragmatic delivery controls create measurable business value.</p>
+      </div>
+      <div class="case-impact-panel">
+        <div class="case-impact-number">£19M</div>
+        <p>Annualised savings identified by fixing the operational data and governance foundations before scaling the transformation.</p>
+      </div>
+    </div>
   </div>
 </header>
 
+<section class="proof-strip">
+  <div class="container proof-grid">
+    <div class="proof-item">Critical data first<span>Targeted the records and controls that affected commercial performance, risk and operational decisions.</span></div>
+    <div class="proof-item">Governance with teeth<span>Clear ownership, reporting rhythm and escalation made data quality part of management control.</span></div>
+    <div class="proof-item">AI-ready foundations<span>Better data created the conditions for automation, analytics and trusted decision support.</span></div>
+  </div>
+</section>
+
 <section class="section">
-  <div class="container">
-    <div class="feature" style="--feature-image: url('images/viziq-proof-impact.png');">
-      <div class="eyebrow">Signature story</div>
-      <p class="quote">£19M annual savings from data quality, governance and operational control.</p>
-      <p>A major operational transformation programme was at risk because the underlying data was not fit for purpose. Rather than push ahead and hope technology would solve the issue, the programme paused, remediated critical data, and introduced governance controls.</p>
-      <div class="pill-list">
-        <span class="pill">Problem: poor data quality</span>
-        <span class="pill">Action: remediation and governance</span>
-        <span class="pill">Outcome: £19M annual savings</span>
+  <div class="container case-study-block">
+    <aside class="case-sidebar">
+      <div class="metric-card">
+        <strong>£19M</strong>
+        <span>Annual savings unlocked by challenging poor data quality before a major operational programme went live.</span>
       </div>
+      <div class="client-safe-note">
+        <p>Details are deliberately client-safe. The value is in the pattern: fix the critical data, prove the benefit, then scale with governance.</p>
+      </div>
+    </aside>
+
+    <div>
+      <div class="case-detail">
+        <div class="case-label">The situation</div>
+        <h2>A major programme was about to scale on weak data.</h2>
+        <p>The organisation had the technology ambition, the operational pressure and the business case, but the underlying data was not trusted enough to support confident decisions. Pushing ahead would have increased risk, diluted savings and made the new operating model harder to land.</p>
+      </div>
+
+      <div class="case-detail">
+        <div class="case-label">The intervention</div>
+        <h3>Pause, fix what mattered, and create control.</h3>
+        <p>The programme focused on the critical operational records first, rather than trying to cleanse everything. Data remediation was paired with governance, ownership and regular exception reporting so quality could be maintained after the initial fix.</p>
+        <ul class="case-list">
+          <li>Prioritised high-value operational and compliance data.</li>
+          <li>Created clear ownership for data decisions and exceptions.</li>
+          <li>Introduced reporting that made quality visible to leadership.</li>
+          <li>Linked data quality improvement to measurable operational outcomes.</li>
+        </ul>
+      </div>
+
+      <div class="case-detail">
+        <div class="case-label">The result</div>
+        <h3>From assumed benefit to measurable value.</h3>
+        <p>The work revealed a far larger opportunity than originally expected. By making the data trustworthy and putting governance around it, the organisation identified annualised savings of more than £19M and created a stronger platform for future automation and analytics.</p>
+        <div class="pill-list">
+          <span class="pill">£19M annualised savings</span>
+          <span class="pill">Reduced operational risk</span>
+          <span class="pill">Stronger governance</span>
+          <span class="pill">Better AI readiness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-block">
+  <div class="container">
+    <div class="section-title"><h2>Patterns we see repeatedly</h2><p>Most organisations do not have a technology problem first. They have a trust, ownership and operating model problem hiding inside their data.</p></div>
+    <div class="grid">
+      <div class="card"><div class="card-number">01</div><h3>Reports are disputed</h3><p>Leadership meetings get dragged into arguments about whose numbers are right, instead of decisions about what needs to change.</p></div>
+      <div class="card"><div class="card-number">02</div><h3>Systems are underused</h3><p>Expensive platforms fail to deliver value because users do not trust the data, the workflows or the outputs.</p></div>
+      <div class="card"><div class="card-number">03</div><h3>AI is premature</h3><p>Automation and AI ideas are pushed before the data is complete, governed or reliable enough to use safely.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section outcome-band">
   <div class="container">
-    <div class="section-title"><h2>More examples</h2><p>These can be expanded as stronger client-safe stories over time.</p></div>
+    <div class="section-title"><h2>More client-safe examples</h2><p>These are the kinds of practical interventions VIZIQ can support across operationally complex organisations.</p></div>
     <div class="grid">
-      <div class="card"><div class="card-number">Data governance</div><h3>Turning disputed reports into trusted decisions</h3><p>Created clearer data ownership, rules and exception reporting to make performance conversations more evidence-based.</p></div>
-      <div class="card"><div class="card-number">AI readiness</div><h3>Stopping AI hype from becoming operational risk</h3><p>Helped identify which use cases were genuinely viable and which needed stronger data foundations first.</p></div>
-      <div class="card"><div class="card-number">Operational systems</div><h3>Improving adoption by fixing the foundations</h3><p>Focused on critical operational and compliance data so systems became trusted by business teams.</p></div>
+      <div class="card mini-case"><div class="card-number">Data governance</div><h3>Turning disputed reports into trusted decisions</h3><p>Created clearer ownership, data rules and exception reporting so performance conversations became evidence-based rather than opinion-based.</p><div class="pill-list"><span class="pill">Ownership</span><span class="pill">Control</span><span class="pill">Trust</span></div></div>
+      <div class="card mini-case"><div class="card-number">AI readiness</div><h3>Stopping AI hype from becoming operational risk</h3><p>Separated viable AI use cases from those needing stronger data foundations, governance and business process clarity first.</p><div class="pill-list"><span class="pill">Readiness</span><span class="pill">Risk</span><span class="pill">Value</span></div></div>
+      <div class="card mini-case"><div class="card-number">Operational systems</div><h3>Improving adoption by fixing the foundations</h3><p>Focused on critical operational and compliance data so business teams could trust the systems they were expected to use.</p><div class="pill-list"><span class="pill">Adoption</span><span class="pill">Data quality</span><span class="pill">Delivery</span></div></div>
     </div>
   </div>
 </section>
 
-<section class="cta"><div class="container"><h2>Have a data challenge worth discussing?</h2><p>A short conversation is usually enough to spot the real issue.</p><a href="contact.html" class="btn">Start the conversation</a></div></section>
+<section class="cta"><div class="container"><h2>Have a data challenge worth discussing?</h2><p>A short conversation is usually enough to spot whether the real issue is technology, data quality, governance or the operating model around it.</p><a href="contact.html" class="btn">Start the conversation</a></div></section>
 <footer>
   <div class="container footer-inner">
     <div>© 2026 VIZIQ Data Assurance</div>
