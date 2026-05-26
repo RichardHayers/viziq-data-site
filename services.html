@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="VIZIQ helps organisations improve critical operational data, strengthen governance, reduce risk, build AI readiness, and unlock measurable business value." />
 
-<!-- Google Analytics: replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-38PRV99QD3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -121,7 +120,7 @@
       var(--hero-image) center/cover;
   }
   .hero.small {
-    min-height: 460px;
+    min-height: 500px;
   }
   .hero::before {
     content: "";
@@ -146,7 +145,7 @@
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 850px;
+    max-width: 880px;
   }
   .hero p {
     color: rgba(255,255,255,0.82);
@@ -322,40 +321,6 @@
   .dark-block .card h3 { color: white; }
   .dark-block .card p { color: rgba(255,255,255,0.72); }
 
-  .service-card {
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: 30px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    isolation: isolate;
-  }
-  .service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.35s ease;
-    background-image: var(--card-image);
-  }
-  .service-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, rgba(7,25,30,0.08), rgba(7,25,30,0.90));
-  }
-  .service-card:hover::before { transform: scale(1.06); }
-  .service-card p { color: rgba(255,255,255,0.78); }
-
   .feature {
     background:
       linear-gradient(90deg, rgba(7,25,30,0.90), rgba(7,25,30,0.55)),
@@ -409,51 +374,7 @@
     font-weight: 900;
     font-size: 31px;
   }
-
-  .contact-form {
-    max-width: 760px;
-    margin: 38px auto 0;
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.18);
-    backdrop-filter: blur(18px);
-    border-radius: 30px;
-    padding: 28px;
-    text-align: left;
-    box-shadow: var(--shadow);
-  }
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .contact-form label {
-    display: block;
-    color: rgba(255,255,255,0.84);
-    font-size: 14px;
-    font-weight: 800;
-    margin: 0 0 8px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.12);
-    color: white;
-    font-size: 16px;
-    outline: none;
-    margin-bottom: 16px;
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: rgba(255,255,255,0.48); }
-  .contact-form textarea { min-height: 130px; resize: vertical; }
-  .contact-form button { cursor: pointer; width: auto; }
-  .form-note {
-    margin: 14px 0 0;
-    font-size: 14px;
-    color: rgba(255,255,255,0.62);
-  }
+  .step p { margin-bottom: 0; }
 
   .cta {
     background:
@@ -486,7 +407,7 @@
   @media (max-width: 920px) {
     .nav-links { display: none; }
     .hero { min-height: auto; padding: 86px 0; }
-    .image-split, .grid, .grid.two, .proof-grid, .form-row { grid-template-columns: 1fr; }
+    .image-split, .grid, .grid.two, .proof-grid { grid-template-columns: 1fr; }
     .photo-card { min-height: 420px; }
     .feature { padding: 34px; }
     .step { grid-template-columns: 1fr; gap: 8px; }
@@ -508,39 +429,114 @@
     </div>
   </div>
 </nav>
+
 <header class="hero small" style="--hero-image: url('images/viziq-hero.png');">
   <div class="container hero-content">
     <div class="eyebrow">Services</div>
-    <h1>Fix the data. <span>Then scale the value.</span></h1>
-    <p>VIZIQ focuses on the operational foundations that make systems trusted, reporting useful and AI deployable.</p>
+    <h1>Fix the data that <span>carries the risk.</span></h1>
+    <p>VIZIQ helps organisations improve critical operational data first, then build the governance, reporting and AI readiness needed to turn trusted data into measurable business value.</p>
+    <div class="btn-row">
+      <a href="contact.html" class="btn">Talk through your challenge</a>
+      <a href="#services" class="btn secondary">Explore services</a>
+    </div>
   </div>
 </header>
 
-<section class="section">
+<section class="proof-strip">
+  <div class="container proof-grid">
+    <div class="proof-item">Critical data first<span>We focus on the records, processes and controls that matter most to performance, risk and value.</span></div>
+    <div class="proof-item">Governance that sticks<span>Clear ownership, exception handling and reporting rhythms so quality does not quietly decay.</span></div>
+    <div class="proof-item">AI-ready foundations<span>Because AI only creates value when the data underneath it can actually be trusted.</span></div>
+  </div>
+</section>
+
+<section class="section" id="services">
   <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">What we do</div>
+      <h2>Practical services for organisations where <span>bad data has real consequences.</span></h2>
+      <p>VIZIQ is not about cleansing everything, everywhere, all at once. We target the operational data that drives cost, compliance, service delivery, reporting and decision-making.</p>
+    </div>
     <div class="grid">
-      <div class="card"><div class="card-number">01</div><h3>Data Assurance</h3><p>Assess, clean, validate and monitor critical operational data so it becomes trusted, usable and decision-ready.</p></div>
-      <div class="card"><div class="card-number">02</div><h3>AI Readiness</h3><p>Identify where AI can create value, what data is needed, and what governance must exist before deployment.</p></div>
-      <div class="card"><div class="card-number">03</div><h3>Operational Data Strategy</h3><p>Improve the operational data behind enterprise platforms, compliance reporting, analytics and business decision-making.</p></div>
-      <div class="card"><div class="card-number">04</div><h3>Technology Selection</h3><p>Support vendor evaluation, requirements definition, RFP design and implementation risk reduction.</p></div>
-      <div class="card"><div class="card-number">05</div><h3>Governance & Control</h3><p>Create ownership, standards, reporting rhythms and exception management so data quality does not decay.</p></div>
-      <div class="card"><div class="card-number">06</div><h3>Programme Rescue</h3><p>Help recover initiatives where poor data, weak adoption or unclear operating models are putting outcomes at risk.</p></div>
+      <div class="card"><div class="card-number">01</div><h3>Critical Data Assurance</h3><p>Assess, clean, validate and monitor the data that matters most, so it becomes trusted, usable and decision-ready.</p></div>
+      <div class="card"><div class="card-number">02</div><h3>AI Readiness</h3><p>Identify where AI can create value, what data it needs, and what controls must exist before it is safely deployed.</p></div>
+      <div class="card"><div class="card-number">03</div><h3>Operational Data Strategy</h3><p>Connect business process, system design and data quality so enterprise platforms support the way the organisation actually works.</p></div>
+      <div class="card"><div class="card-number">04</div><h3>Technology Selection</h3><p>Support requirements, vendor evaluation, RFP design and implementation planning with a strong focus on data and operating model risk.</p></div>
+      <div class="card"><div class="card-number">05</div><h3>Governance & Control</h3><p>Create ownership, standards, reporting routines and exception management so data quality is actively managed, not assumed.</p></div>
+      <div class="card"><div class="card-number">06</div><h3>Programme Recovery</h3><p>Help recover initiatives where poor data, weak adoption, unclear ownership or process gaps are putting outcomes at risk.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section outcome-band">
+  <div class="container image-split">
+    <div class="photo-card" style="--photo-image: url('images/viziq-proof-impact.png');">
+      <div class="floating-note"><span>VIZIQ principle</span>Do not boil the ocean. Prove value on the data that matters most, then scale with confidence.</div>
+    </div>
+    <div>
+      <div class="eyebrow">How VIZIQ works</div>
+      <h2>Start small enough to move quickly. <span>Focus deep enough to matter.</span></h2>
+      <p>Large transformation programmes often fail because they try to fix everything before proving anything. VIZIQ takes a sharper route: identify the critical dataset, prove the operational value, create the governance model, then expand from a position of confidence.</p>
+      <div class="pill-list">
+        <div class="pill">Data quality</div>
+        <div class="pill">Business process</div>
+        <div class="pill">Governance</div>
+        <div class="pill">AI readiness</div>
+        <div class="pill">Operational control</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section dark-block">
   <div class="container">
-    <div class="section-title"><h2>How services are delivered</h2><p>Short, sharp interventions or deeper support depending on the scale of the challenge.</p></div>
+    <div class="section-title">
+      <div class="eyebrow">Delivery options</div>
+      <h2>Short, sharp interventions or deeper delivery support.</h2>
+      <p>Services can be shaped around a specific issue, a board-level decision, a vendor programme, or an operational transformation already in motion.</p>
+    </div>
     <div class="grid">
-      <div class="card"><h3>Assessment</h3><p>A focused review of data health, risk, readiness and priorities.</p></div>
-      <div class="card"><h3>Roadmap</h3><p>A practical plan showing what to fix first and why it matters commercially.</p></div>
-      <div class="card"><h3>Delivery support</h3><p>Hands-on advisory through remediation, governance, vendor engagement or implementation.</p></div>
+      <div class="card"><h3>Assessment</h3><p>A focused review of data health, process gaps, system risk, governance maturity and AI readiness.</p></div>
+      <div class="card"><h3>Roadmap</h3><p>A practical plan showing what to fix first, what value it unlocks, and how to sequence the work without creating unnecessary disruption.</p></div>
+      <div class="card"><h3>Delivery support</h3><p>Hands-on advisory through remediation, governance setup, vendor engagement, reporting design or implementation recovery.</p></div>
     </div>
   </div>
 </section>
 
-<section class="cta"><div class="container"><h2>Want to understand where your data is holding you back?</h2><p>Start with a quick conversation. No hard sell.</p><a href="contact.html" class="btn">Have a quick chat</a></div></section>
+<section class="section">
+  <div class="container">
+    <div class="feature" style="--feature-image: url('images/viziq-data-assurance.png');">
+      <div class="eyebrow">The outcome</div>
+      <div class="quote">Trusted data, stronger decisions and technology that delivers what the business expected.</div>
+      <p>VIZIQ helps close the gap between business ambition and operational reality by making the underlying data, ownership and processes fit for purpose.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container image-split">
+    <div>
+      <div class="eyebrow">Typical engagement</div>
+      <h2>From messy data problem to <span>measurable improvement.</span></h2>
+      <p>Every engagement is shaped around the organisation, but the method stays deliberately practical: focus the problem, prove the value, then build the controls to keep it working.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div><h3>Find the critical data</h3><p>Identify the records, systems and processes creating the most risk, cost or lost opportunity.</p></div></div>
+      <div class="step"><div><h3>Prove what can improve</h3><p>Use a targeted dataset to show the value of better quality, ownership, reporting and control.</p></div></div>
+      <div class="step"><div><h3>Embed the governance</h3><p>Define owners, standards, exception processes and reporting rhythms so improvement is sustained.</p></div></div>
+      <div class="step"><div><h3>Scale with confidence</h3><p>Expand the approach across other datasets, platforms, regions or business processes once the model has been proven.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Want to know where your data is holding you back?</h2>
+    <p>Start with a quick conversation. No hard sell. Just a practical view of where trusted data could reduce risk, improve performance or unlock AI readiness.</p>
+    <a href="contact.html" class="btn">Have a quick chat</a>
+  </div>
+</section>
+
 <footer>
   <div class="container footer-inner">
     <div>© 2026 VIZIQ Data Assurance</div>
