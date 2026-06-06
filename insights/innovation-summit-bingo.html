@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovation Summit Bingo | VIZIQ Insight</title>
+  <meta name="description" content="A VIZIQ insight on separating genuine innovation from hype, using humour, evidence and practical lessons from an innovation summit." />
+  <style>
+    :root {
+      --navy: #07111f;
+      --navy-2: #0f1d31;
+      --navy-3: #14243a;
+      --text: #f5f7fb;
+      --muted: #b8c2d6;
+      --accent: #70e0c2;
+      --gold: #f5b84b;
+      --coral: #ff7a59;
+      --line: rgba(255,255,255,0.13);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(112,224,194,0.20), transparent 28%),
+        radial-gradient(circle at 88% 6%, rgba(245,184,75,0.18), transparent 24%),
+        linear-gradient(160deg, #07111f 0%, #0a1627 50%, #050914 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header.site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 17, 31, 0.88);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 82px 0 46px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.3rem);
+      line-height: 0.98;
+      margin: 0 0 24px;
+      max-width: 1000px;
+    }
+
+    .lede {
+      max-width: 870px;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 13px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    main { padding-bottom: 80px; }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .card {
+      background: rgba(15, 29, 49, 0.84);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: clamp(24px, 4vw, 48px);
+      box-shadow: 0 22px 70px rgba(0,0,0,0.26);
+    }
+
+    .card h2 {
+      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      line-height: 1.12;
+      margin: 0 0 18px;
+    }
+
+    .card h3 {
+      font-size: 1.22rem;
+      margin: 28px 0 10px;
+      color: var(--gold);
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .bingo-graphic {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.38);
+      display: block;
+      margin: 28px 0 10px;
+      background: #fff;
+    }
+
+    .caption {
+      font-size: 0.92rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    ul {
+      margin: 16px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 10px; }
+
+    .callout {
+      border-left: 5px solid var(--accent);
+      background: linear-gradient(135deg, rgba(112,224,194,0.14), rgba(255,255,255,0.04));
+    }
+
+    .warning {
+      border-left: 5px solid var(--gold);
+      background: linear-gradient(135deg, rgba(245,184,75,0.14), rgba(255,255,255,0.035));
+    }
+
+    .danger {
+      border-left: 5px solid var(--coral);
+      background: linear-gradient(135deg, rgba(255,122,89,0.13), rgba(255,255,255,0.035));
+    }
+
+    .comparison-grid, .three-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .three-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .comparison-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .comparison-box h3 { margin-top: 0; }
+
+    .quote {
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1.25;
+      color: var(--text) !important;
+      margin: 0;
+    }
+
+    .quote span { color: var(--accent); }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      border: 1px solid var(--line);
+      font-size: 0.92rem;
+    }
+
+    .final {
+      background: linear-gradient(135deg, rgba(112,224,194,0.18), rgba(245,184,75,0.12));
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #05111d;
+    }
+
+    .button.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 820px) {
+      .nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .comparison-grid, .three-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">VIZIQ</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../services.html">Services</a>
+        <a href="../case-studies.html">Case Studies</a>
+        <a href="../approach.html">Approach</a>
+        <a href="../insights.html">Insights</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">VIZIQ Insight</div>
+        <h1>Innovation Summit Bingo: Separating Innovation from Hype</h1>
+        <p class="lede">
+          Three days at an innovation summit provided a useful reminder: not everything labelled as innovation is innovation.
+          Sometimes it is insight. Sometimes it is marketing. Sometimes it is just a countdown timer with remarkable survival skills.
+        </p>
+        <div class="article-meta">
+          <span class="tag">AI Readiness</span>
+          <span class="tag">Change Management</span>
+          <span class="tag">Trusted Data</span>
+          <span class="tag">Innovation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container article-layout">
+
+      <article class="card">
+        <h2>The Bingo Card Was Funny. The Lesson Was Serious.</h2>
+        <p>
+          I attended a multi-day innovation event expecting AI, robotics, data, business transformation and future trends.
+          Some of that appeared. There were genuinely useful moments around experimentation, AI as a co-pilot, human-centred adoption and the speed of technological change.
+        </p>
+        <p>
+          But there was also a lot of innovation theatre.
+        </p>
+        <p>
+          The same offers appeared repeatedly. Countdown timers expired and returned. Replays were apparently disappearing, then somehow remained available.
+          Bonus packages grew in value at a rate that would make most finance teams nervous.
+        </p>
+
+        <img
+  src="../images/innovation-summit-bingo.png"
+  alt="Innovation Summit Bingo"
+  class="bingo-graphic"
+/>
+        <p class="caption">
+          Innovation Summit Bingo: a light-hearted way to spot when insight is turning into theatre.
+        </p>
+      </article>
+
+      <section class="card callout">
+        <h2>Innovation Summit Bingo</h2>
+        <p>If you have attended enough technology, leadership or innovation events, some of these may feel familiar:</p>
+        <ul>
+          <li>AI will change everything.</li>
+          <li>Exponential growth appears before any practical example.</li>
+          <li>Limited-time offer.</li>
+          <li>Offer expires today, then reappears tomorrow.</li>
+          <li>Only a few places left, for quite a long time.</li>
+          <li>Huge value stack reduced by 90 percent.</li>
+          <li>Secret framework.</li>
+          <li>Exclusive access.</li>
+          <li>Speaker spends more time selling than teaching.</li>
+          <li>Automation email sent to someone already attending the session.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>The Best Ideas Were Simple</h2>
+        <p>
+          The strongest sessions were not the loudest or the most dramatic. They were the most practical.
+        </p>
+        <p>The most useful messages were:</p>
+        <ul>
+          <li>Start small.</li>
+          <li>Experiment quickly.</li>
+          <li>Fail fast and learn.</li>
+          <li>Use AI as a co-pilot, not a replacement for judgement.</li>
+          <li>Increase efficiency, but also increase the human touch.</li>
+          <li>Bring diverse voices into innovation because good ideas can come from anywhere.</li>
+        </ul>
+        <p>
+          That is what real innovation usually looks like. Not grand claims. Not magic formulas. Not urgency for urgency's sake.
+          Just people trying things, learning, adapting and scaling what works.
+        </p>
+      </section>
+
+      <section class="card warning">
+        <h2>The Best Accidental Case Study: Bad Automation</h2>
+        <p>
+          One of the most useful moments came from a poor automated email.
+        </p>
+        <p>
+          During the event, I received a message telling me I was late to a session I was already attending.
+          It also referenced a speaker that did not match the session banner.
+        </p>
+        <p>That small mistake says a lot.</p>
+        <p>
+          The problem was not AI. The problem was poor data, poor process design and weak governance.
+          The automation did what it was told to do. The issue was that the underlying logic and data were not good enough.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>This Is Why Trusted Data Matters</h2>
+        <p>
+          AI does not remove the need for trusted data. It increases it.
+        </p>
+        <p>
+          If the source data is wrong, the segmentation is poor, the business rules are unclear or the process has not been properly designed,
+          automation will simply make poor decisions faster.
+        </p>
+        <p>
+          That is where organisations often go wrong. They invest in AI before fixing the operational foundations that AI depends on.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>AI Can Accelerate Data Improvement</h2>
+        <p>
+          There is another side to this.
+        </p>
+        <p>
+          AI can help identify and improve poor-quality data much faster than traditional manual review.
+          It can help spot duplicates, missing values, inconsistent naming, unusual patterns and likely errors.
+        </p>
+        <p>
+          But AI should accelerate governance, not replace it.
+        </p>
+        <p>
+          People still need to validate, prioritise, approve and understand the business context.
+          The opportunity is not to let AI take over. The opportunity is to use AI to find the critical issues faster and focus human effort where it matters most.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>The Real AI Challenge Is Change Management</h2>
+        <p>
+          The biggest AI challenge is not usually the model.
+        </p>
+        <p>
+          It is helping people, teams and organisations adapt.
+        </p>
+        <p>That means:</p>
+        <ul>
+          <li>Training people properly.</li>
+          <li>Reducing fear and confusion.</li>
+          <li>Redesigning processes.</li>
+          <li>Creating governance.</li>
+          <li>Building trust.</li>
+          <li>Showing practical use cases.</li>
+          <li>Starting small and proving value.</li>
+        </ul>
+        <p>
+          Technology adoption fails when people are left behind.
+          AI and people need to move together.</p>
+        <p>
+          Most organisations do not fail because the AI model is wrong.
+        </p>
+        <p>
+          They fail because ownership is unclear, adoption is weak, success measures are undefined and the business is not prepared to change.
+        </p>
+        <p>
+          Successful adoption should be measured.
+        </p>
+        <p>
+          Organisations should define the operational, financial or customer outcomes they expect to improve before deployment begins.
+        </p>
+        <p>
+          If benefits are not measured, success becomes opinion rather than evidence.
+        </p>
+      </section>
+
+      <section class="card">
+        <p class="quote">
+          <span>AI should create more time for people,</span> not less.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Innovation Theatre vs Real Innovation</h2>
+        <p>Innovation theatre creates noise.</p>
+        <p>Real innovation creates evidence.</p>
+
+        <div class="comparison-grid">
+          <div class="comparison-box">
+            <h3>Innovation Theatre</h3>
+            <ul>
+              <li>Big claims.</li>
+              <li>Artificial urgency.</li>
+              <li>Vague outcomes.</li>
+              <li>Overstated value.</li>
+              <li>Little evidence.</li>
+              <li>More selling than teaching.</li>
+            </ul>
+          </div>
+
+          <div class="comparison-box">
+            <h3>Real Innovation</h3>
+            <ul>
+              <li>Clear problem.</li>
+              <li>Practical experiment.</li>
+              <li>Measured outcome.</li>
+              <li>Lessons learned.</li>
+              <li>Evidence of value.</li>
+              <li>Path to scale.</li><li>Business ownership.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card danger">
+        <h2>Innovation Tolerance Tablets</h2>
+        <p>
+          After enough conferences, most leaders develop a healthy filter for overstatement.
+          Mine has a name: Innovation Tolerance Tablets.
+        </p>
+        <p>
+          Take one whenever a session moves from practical evidence into artificial urgency, vague promises or a bonus package that appears to be growing faster than the business case.
+        </p>
+        <div class="pill-row">
+          <span class="pill">May reduce hype sensitivity</span>
+          <span class="pill">May increase evidence requests</span>
+          <span class="pill">Best taken with coffee</span>
+          <span class="pill">Not valid with mystery boxes</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>The Useful Question</h2>
+        <p>
+          The most useful question from the event was not whether AI will change everything.
+          It probably will.
+        </p>
+        <p>The better question is:</p>
+        <p class="quote">
+          Where can AI help us improve something important, quickly, safely and measurably?
+        </p>
+        <p>
+          That question moves the conversation away from hype and towards value.
+          It also forces organisations to think about data quality, governance, adoption and measurable outcomes.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What Leaders Should Look For</h2>
+        <p>
+          The best innovation conversations do not ask people to suspend judgement. They invite scrutiny.
+        </p>
+        <div class="three-grid">
+          <div class="comparison-box">
+            <h3>Evidence</h3>
+            <p>Can the claim be tested, measured or explained with real examples?</p>
+          </div>
+          <div class="comparison-box">
+            <h3>Relevance</h3>
+            <p>Does the idea solve a real problem for this organisation, or is it just interesting?</p>
+          </div>
+          <div class="comparison-box">
+            <h3>Adoption</h3>
+            <p>Can people realistically use it, trust it and change the way they work?</p>
+          </div>
+        <div class="comparison-box">
+            <h3>Ownership</h3>
+            <p>Who is accountable for ensuring value is realised, adopted and sustained?</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card final">
+        <h2>The Takeaway</h2>
+        <p>
+          The future will not belong to organisations that chase every shiny new tool.
+        </p>
+        <p>
+          It will belong to organisations that can separate evidence from hype, identify where AI can genuinely improve outcomes,
+          and build the trusted data, governance, ownership, adoption and change management needed to make it work.
+        </p>
+        <p>
+          Innovation does not need a countdown timer.
+        </p>
+        <p>
+          It needs a real problem, a practical experiment, trusted data and people willing to learn.
+        </p>
+
+        <div class="button-row">
+          <a class="button primary" href="../contact.html">Talk to VIZIQ</a>
+          <a class="button secondary" href="../insights.html">Back to Insights</a>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 VIZIQ. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
